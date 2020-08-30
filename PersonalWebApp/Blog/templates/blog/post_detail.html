@@ -1,0 +1,59 @@
+{% extends 'views/base.html' %}
+
+{% block content %}
+<div class="full-black-background">
+  <div class="container">
+    <div class="col-lg-12">
+      <div class="brand" data-aos="fade-down">
+        <a href="/"><h1>Cigan Oliviu David</h1></a>
+        <h3 class="active-menu">{{ post.title }}</h3>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="white-background" align="center" id="blog">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4" data-aos="fade-right">
+        <div class="card-body" align="center">
+          <img src="{{ post.representation.url }}" />
+          <div>&nbsp</div>
+          <h1 class="card-title">{{ post.title }}</h1>
+          <div>&nbsp</div>
+          <h4 class="card-text">{{ post.author }} | {{ post.created_on}} </h4>
+          <div>&nbsp</div>
+        </div>
+      </div>
+      <div class="col-lg-8" data-aos="fade-left">
+        <p>{{ post.content | safe }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer" align="center">
+  <div class="container-fluid">
+    <div class="col-lg-12">
+      <h1 data-aos="fade-up">Have questions? Call 1.855.932.8091</h1>
+      <div>&nbsp;</div>
+      <div class="line" data-aos="fade-up"></div>
+      <div>&nbsp;</div>
+      <div class="non-class" data-aos="fade-up">
+        <ul>
+          <a href="/"><li>Home</li></a>
+          <a href="/books/"><li>Books Recommandation</li></a>
+          <a href="/blog/"><li>Personal Blog</li></a>
+        </ul>
+        <div>&nbsp;</div>
+        <div class="social-media">
+          <a href="https://www.linkedin.com/in/oliviu-david-c-72489015b/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>  <a href="https://www.whatsapp.com/" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a> <a href="https://github.com/CiganOliviu" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a> <a href="https://www.instagram.com/ciganoliviu/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div>&nbsp;</div>
+      <h4>Copyright &copy; Cigan Oliviu David all rights reserved</h4>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
