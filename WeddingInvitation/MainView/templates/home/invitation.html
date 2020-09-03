@@ -27,26 +27,6 @@
 </div>
 </div>
 
-<header class="header">
-  <div class="container">
-    <a class="logo" href="#">{{ user.first_name }} {{ user.last_name }}</a>
-    <div class="mobile-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <nav class="nav">
-      <ul class="menu">
-        <li><a href="{% url 'logout' %}">Logout</a></li>
-        <li><a href="{% url 'password_reset' %}" target="_blank">Reset Password</a></li>
-        <li><a href="/">Go to main page</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-<div>&nbsp;</div>
-
 {% load static %}
 <div class="container" align="center">
   <div class="col-lg-12">
@@ -55,6 +35,16 @@
     <p>Our wedding day event order as follows with different cultures and religions will incorporate other elements or swap things around.</p>
   </div>
 </div>
+
+<label>
+  <input type="checkbox">
+  <span class="menu"> <span class="hamburger"></span> </span>
+  <ul>
+    <li> <a href="/">Home</a> </li>
+    <li> <a href="/accounts/logout">Logout</a> </li>
+    <li> <a href="/accounts/password_reset">Reset Password</a> </li>
+  </ul>
+</label>
 
 <div class="timeline">
   <ul>

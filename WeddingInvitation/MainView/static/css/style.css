@@ -19,6 +19,10 @@ p {
 	color: #666666;
 }
 
+a {
+  text-decoration: none;
+}
+
 a:hover {
 	text-decoration: none;
 }
