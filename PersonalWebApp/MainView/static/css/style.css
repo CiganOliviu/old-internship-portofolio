@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 body {
-	font-size: 18px;
+	font-size: 20px;
 	font-family: 'Roboto', sans-serif;
 	background: #f2f2f2;
 }
@@ -696,7 +696,7 @@ section.model-4 .graph:before {
 
 .box-project img {
 		width: 100%;
-		height: auto;
+		height: 180px; /* should be set to auto after getting all avaible projects */
 }
 
 .box-project .box-content {
@@ -716,39 +716,31 @@ section.model-4 .graph:before {
 		font-weight: 700;
 		margin: 0 0 10px;
 		display: block;
-		text-transform:uppercase;
 		letter-spacing: 1px;
 }
 
 .box-project .box-content .post {
 		display: block;
 		font-size: 19px;
-		font-style: italic;
 		font-weight: 600;
 }
 
 .box-project .box-content .post i {
 	font-size: 25px;
+	color: #ffffff;
+	transition: all 500ms ease;
 }
 
-.box-project .box-content .post #smaller {
-	font-size: 18px;
+.box-project .box-content .post i:hover {
+	font-size: 25px;
+	color: #4584b6;
 }
 
-.fa-html5 {
-	color: #E44D26;
-}
-
-.fa-css3-alt {
-	color: #264de4;
-}
-
-.fa-js {
-	color: #f0db4f;
-}
-
-.fa-python {
-	color: #306998;
+.box-project .box-content .smaller-post {
+		display: block;
+		font-size: 13px;
+		font-style: italic;
+		font-weight: 600;
 }
 
 .books img {
