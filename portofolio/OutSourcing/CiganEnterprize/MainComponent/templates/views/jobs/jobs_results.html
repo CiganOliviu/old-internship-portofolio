@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Jobs results</h1>
+    <div>&nbsp;</div>
+    <form action="{% url 'jobs_search' %}" method="get">
+      <input type="text" name="q" value="{{ request.GET.q }}" placeholder="Search a Job">
+      <div>&nbsp;</div>
+      <button type="submit" name="button">Search Article</button>
+    </form>
+    <div>&nbsp;</div>
+    {% for result in results %}
+      <a href="{% url 'job_detail' result.job_slug %}">{{ result.post }}</a>
+      <div>&nbsp;</div>
+    {% endfor %}
+  </body>
+</html>

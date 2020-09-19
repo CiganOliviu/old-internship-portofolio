@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>{{ post.title }}</h1>
+    <p>{{ post.introduction }}</p>
+    <h1>{{ post.sub_title_one }}</h1>
+    <p>{{ post.sub_content_one }}</p>
+    <h1>{{ post.sub_title_two }}</h1>
+    <p>{{ post.sub_content_two }}</p>
+    <h1>{{ post.sub_title_three }}</h1>
+    <p>{{ post.sub_content_three }}</p>
+    <h1>{{ post.sub_title_four }}</h1>
+    <p>{{ post.sub_content_four }}</p>
+    <p>{{ post.author }}</p>
+    <p>{{ post.updated_on }}</p>
+
+    <img src="{{ post.wallpaper_representation.url }}" alt="{{ post.title }}">
+    <img src="{{ post.cover_representation.url }}" alt="{{ post.title }}">
+  </body>
+</html>

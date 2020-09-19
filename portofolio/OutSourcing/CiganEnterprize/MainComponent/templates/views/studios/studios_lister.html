@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Studios</title>
+  </head>
+  <body>
+    <h1>Studios</h1>
+    {% for studio in studios_result %}
+      <a href="{% url 'studio_detail' studio.studio_slug %}">{{ studio.city }}</a>
+      <div>&nbsp;</div>
+    {% endfor %}
+
+    <div>&nbsp;</div>
+
+    <h1>Avaible Jobs</h1>
+    {% for job in jobs_result %}
+      <a href="{% url 'job_detail' job.job_slug %}"> {{ job.post }}</a>
+      <div>&nbsp;</div>
+    {% endfor %}
+  </body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Sponsor Events</h1>
+    <div>&nbsp;</div>
+
+    {% for event in sponsor_events_query %}
+      <a href="{% url 'sponsor_event_detail' event.event_slug %}">{{ event.event_name }}</a>
+    {% endfor %}
+  </body>
+</html>

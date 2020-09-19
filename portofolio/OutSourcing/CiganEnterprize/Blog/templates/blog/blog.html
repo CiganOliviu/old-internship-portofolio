@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form class="form" action="{% url 'blog_search' %}" method="get">
+      <input type="text" name="q" value="{{ request.GET.q }}" placeholder="Search an Article"  data-aos="fade-down">
+      <div>&nbsp;</div>
+      <button type="submit" class="btn btn-primary" data-aos="fade-down">Search Article</button>
+    </form>
+    {% for post in post_list %}
+
+      <h1>{{ post.title }}</h1>
+      <a href="{% url 'post_detail' post.slug %}">Read more</a>
+    {% endfor %}
+  </body>
+</html>

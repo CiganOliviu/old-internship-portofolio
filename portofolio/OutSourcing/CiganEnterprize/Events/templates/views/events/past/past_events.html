@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Past Events</h1>
+    <div>&nbsp;</div>
+
+    {% for event in past_events_query %}
+      <a href="{% url 'past_event_detail' event.past_event_slug %}">{{ event.past_event_slug }}</a>
+      <div>&nbsp;</div>
+    {% endfor %}
+  </body>
+</html>
