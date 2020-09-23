@@ -97,7 +97,7 @@ class JobAppliance(generic.TemplateView):
 
     def _validate_save(self, database_name, database_object):
 
-        if not JobsAppliance.objects.filter(first_name = post.first_name, last_name = post.last_name,
+        if not database_name.objects.filter(first_name = post.first_name, last_name = post.last_name,
             email = post.email, years_of_experience = post.years_of_experience,
             description_of_skills = post.description_of_skills, carrer = post.carrer).exists():
             return True
