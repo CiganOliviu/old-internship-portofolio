@@ -1,21 +1,116 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <h1>Jobs results</h1>
-    <div>&nbsp;</div>
-    <form action="{% url 'jobs_search' %}" method="get">
-      <input type="text" name="q" value="{{ request.GET.q }}" placeholder="Search a Job">
-      <div>&nbsp;</div>
-      <button type="submit" name="button">Search Article</button>
-    </form>
-    <div>&nbsp;</div>
-    {% for result in results %}
-      <a href="{% url 'job_detail' result.job_slug %}">{{ result.post }}</a>
-      <div>&nbsp;</div>
+{% extends 'views/layouts/main_layout.html' %}
+
+{% block content %}
+
+<header class="header">
+  <a href="{% url 'index' %}" class="logo"><i class="fas fa-terminal" id="logo_terminal"></i>Cigan<b>Enterprize</b></a>
+  <input class="menu-btn" type="checkbox" id="menu-btn" />
+  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+  <ul class="menu">
+    <li><a class="from-left" href="{% url 'studio_lister' %}"><i class="fas fa-building"></i> Studios</a></li>
+    <li><a class="from-left" href="{% url 'jobs_lister' %}"><i class="fas fa-briefcase"></i> Carers</a></li>
+    <li><a class="from-left" href="{% url 'newsletter' %}"><i class="fas fa-newspaper"></i> Newsletter</a></li>
+    <li><a class="from-left" href="{% url 'formular_contact' %}"><i class="fas fa-envelope"></i> Contact</a></li>
+    <li><a class="from-left" href="{% url 'host_events' %}"><i class="fas fa-calendar-alt"></i> Events</a></li>
+    <li><a class="from-left" href="{% url 'internships_lister' %}"><i class="fas fa-people-carry"></i> <b>Intern</b>Ship</a></li>
+    <li><a class="from-left" href="{% url 'blog_name' %}"><i class="fas fa-blog"></i> Company<b>Blog</b></a></li>
+  </ul>
+</header>
+
+<div>&nbsp;</div>
+
+<div class="white-background">
+  <div class="container-fluid" align="center" id="brands">
+    <div class="col-lg-12">
+      <div class="mobile-margin-adjust">
+        <h1 class="big-title">Cigan<b>Enterprize</b> Available Jobs</h1>
+        <div>&nbsp;</div>
+        <form class="search-bar" action="{% url 'jobs_search' %}" method="get">
+          <input type="text" name="q" value="{{ request.GET.q }}" placeholder="Search a Job">
+          <div>&nbsp;</div>
+          <button type="submit" name="button" class="btn btn-primary">Search Carrer</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+<div class="container-fluid" id="gray-wallpaper-color" align="center">
+  {% for result in results %}
+    <div class="carrers" onclick="location.href='{% url 'job_detail' result.job_slug %}';" style="cursor:pointer;">
+        <div class="col-lg-6">
+            <h1><b>{{ result.post }}</b></h1>
+            <div>&nbsp;</div>
+            <p>{{ result.description | slice:":150"}} ..</p>
+        </div>
+        <div class="col-lg-6">
+          <p><i class="fas fa-thumbtack"></i> {{ result.location }}</p>
+          <div>&nbsp;</div>
+          <p><i class="fas fa-laptop-house"></i> {{ result.job_type }}</p>
+          <div>&nbsp;</div>
+          <p><i class="fas fa-star"></i> <b>Job Perks: </b>{{ result.perks }}</p>
+        </div>
+        <div>&nbsp;</div>
+    </div>
+  {% endfor %}
+</div>
+
+<div>&nbsp;</div>
+
+<div class="white-background">
+  <div class="container-fluid" align="center" id="brands">
+    <div class="col-lg-12">
+      <div class="mobile-margin-adjust">
+        <h1 class="big-title">Cigan<b>Enterprize</b> Studios</h1>
+      </div>
+    </div>
+  </div>
+
+<div class="container-fluid" align="center">
+  <div class="city">
+    {% for studio in studios_result %}
+      <div class="col-lg-4"  onclick="location.href='{% url 'studio_detail' studio.studio_slug %}';" style="cursor:pointer;">
+        <img src="{{ studio.studio_image.url }}">
+        <div class="studio-city">
+          <h1><b>{{ studio.city }}, {{ studio.country }}</b></h1>
+        </div>
+        <div>&nbsp;</div>
+        <div class="studio-time">
+          <h2><b>{{ studio.moment }}</b></h2>
+        </div>
+      </div>
     {% endfor %}
-  </body>
-</html>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="footer">
+    <div class="col-lg-6">
+      <div class="footer" align="left">
+        <h2><i class="fas fa-terminal" id="logo_terminal"></i> Cigan<b>Enterprize</b></h2>
+        <div>&nbsp;</div>
+        <p><i class="far fa-copyright"></i> 2020 CiganEnterprize. All rights reserved.</p>
+      </div>
+    </div>
+    <div class="col-lg-6" align="center">
+      <div class="footer">
+        <div class="topnav">
+          <div>&nbsp;</div>
+          <a href="{% url 'studio_lister' %}">Studios</a>
+          <a href="{% url 'jobs_lister' %}">Carers</a>
+          <a href="{% url 'newsletter' %}">Newsletter</a>
+          <a href="{% url 'formular_contact' %}">Contact</a>
+          <a href="{% url 'host_events' %}">Events</a>
+          <a href="{% url 'internships_lister' %}"><b>Intern</b>Ships</a>
+          <a href="{% url 'blog_name' %}">Company<b>Blog</b></a>
+        </div>
+        <div class="social-media">
+          <a href="#"><i class="fab fa-linkedin"></i> </a>
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+</div>
+{% endblock %}

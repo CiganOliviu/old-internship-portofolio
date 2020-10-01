@@ -4,8 +4,22 @@ from django.views import generic
 from django.db.models import Q
 
 from . import events_management
-from .models import Studio, JobsAppliance, AvaibleJob
-from Events.models import PastEvent, SponsorEvent, HostEvent
+from . import update_date
+
+from .models import (
+    Studio,
+    JobsAppliance,
+    InternshipsAppliance,
+    AvaibleJob,
+    AvaibleInternship,
+)
+
+from Events.models import (
+    PastEvent,
+    SponsorEvent,
+    HostEvent
+)
+
 from .forms import ApplianceForm
 
 def index(request):
@@ -21,8 +35,10 @@ def studio_lister(request):
 
     template_name = 'views/studios/studios_lister.html'
 
+    update_date.update_date_in_studios()
+
     studios_result = Studio.objects.all()
-    jobs_result = AvaibleJob.objects.all()
+    jobs_result = AvaibleJob.objects.all()[:5]
 
     context = {
 
@@ -45,6 +61,10 @@ def search_jobs_view(request):
 
     template_name = 'views/jobs/jobs_results.html'
 
+    update_date.update_date_in_studios()
+
+    studios_result = Studio.objects.all()
+
     query = request.GET.get('q')
 
     if query:
@@ -54,6 +74,7 @@ def search_jobs_view(request):
 
     context = {
 
+        'studios_result' : studios_result,
         'results' : results,
     }
 
@@ -63,10 +84,14 @@ def jobs_lister(request):
 
     template_name = 'views/jobs/jobs_lister.html'
 
+    update_date.update_date_in_studios()
+
+    studios_result = Studio.objects.all()
     jobs_result = AvaibleJob.objects.all()
 
     context = {
 
+        'studios_result' : studios_result,
         'jobs_result' : jobs_result,
     }
 
@@ -116,3 +141,55 @@ class JobAppliance(generic.TemplateView):
                 form.save()
 
         return render(request, self.final_template_name)
+
+def internships_lister(request):
+
+    template_name = 'views/internships/internships_lister.html'
+
+    update_date.update_date_in_studios()
+
+    internships_results = AvaibleInternship.objects.all()
+    studios_result = Studio.objects.all()
+
+    context = {
+
+        'internships_results' : internships_results,
+        'studios_result' : studios_result,
+    }
+
+    return render(request, template_name, context)
+
+def search_internships_views(request):
+
+        template_name = 'views/internships/internships_results.html'
+
+        update_date.update_date_in_studios()
+        
+        studios_result = Studio.objects.all()
+
+        query = request.GET.get('q')
+
+        if query:
+            results = AvaibleInternship.objects.filter(Q(post__icontains = query) | Q(location__city__icontains = query))
+        else:
+            return redirect('/internships')
+
+        context = {
+
+            'studios_result' : studios_result,
+            'results' : results,
+        }
+
+        return render(request, template_name, context)
+
+class InternshipDetails(generic.DetailView):
+
+    model = AvaibleInternship
+
+    template_name = 'views/internships/internship_details.html'
+
+    slug_field = 'internship_slug'
+    slug_url_kwarg = 'internship_slug'
+
+class InternshipAppliance(generic.TemplateView):
+    pass
