@@ -1,0 +1,160 @@
+{% extends 'views/base.html' %}
+
+{% block content %}
+
+<div class="blog-wallpaper">
+    <div class="black-background">
+      <div class="container">
+        <div class="col-lg-12">
+          <div class="brand" data-aos="fade-down">
+            <a href="/"><h1>Cigan Oliviu David</h1></a>
+            <a href="https://www.linkedin.com/in/oliviu-david-c-72489015b/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a> <a href="https://www.whatsapp.com/" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a> <a href="https://github.com/CiganOliviu" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a> <a href="https://www.instagram.com/ciganoliviu/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <label>
+      <input type="checkbox">
+      <span class="menu"> <span class="hamburger"></span> </span>
+      <ul class="deactivate-click">
+        <li> <a class="deactivate-click" href="{% url 'Index' %}"><i class="fas fa-home"></i> Home</a> </li>
+        <li> <a class="deactivate-click" href="{% url 'Books' %}"><i class="fas fa-book"></i> Books Recommandation</a> </li>
+        <li> <a class="deactivate-click" href="{% url 'blog_name' %}"><i class="fas fa-blog"></i> Personal Blog</a> </li>
+      </ul>
+  </label>
+
+  <div class="welcome">
+    <div class="black-background">
+      <div class="container">
+        <div class="col-lg-12" data-aos="fade-up">
+          <div class="welcome-message">
+            <h1 class="message">Scroll down to see results with: {{ request.GET.q }}.</h1>
+            <a href="#" class="scroll-down-blog"> <i class="fa fa-arrow-down" aria-hidden="true"></i> </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="white-background" align="center" id="blog">
+  <div class="container">
+    <div class="col-lg-12">
+      <div class="form-div">
+        <h1 data-aos="fade-down">Search an Article in Over {{ results.count }} Articles</h1>
+        <div>&nbsp;</div>
+        <form class="form" action="{% url 'blog_search' %}" method="get">
+          <input type="text" name="q" value="{{ request.GET.q }}" placeholder="Search an Article"  data-aos="fade-down">
+          <div>&nbsp;</div>
+          <button type="submit" class="btn btn-primary" data-aos="fade-down">Search Article</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% if results %}
+  {% for result in results %}
+  <div class="white-background" align="center" id="blog">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4" data-aos="fade-right">
+          <div class="card-body" align="center">
+            <img src="{{ result.cover_representation.url }}" />
+          </div>
+        </div>
+        <div class="col-lg-8" data-aos="fade-left">
+          <h1 class="card-title">{{ result.title }}</h1>
+          <div>&nbsp</div>
+          <p>{{ result.introduction | slice:":700" }}</p>
+          <div>&nbsp</div>
+          <h4 class="card-text">{{ result.author }}</h4>
+          <div>&nbsp</div>
+          <h4 class="card-text">{{ result.created_on}} </h4>
+          <div>&nbsp</div>
+          <a href="{% url 'post_detail' result.slug  %}" class="btn btn-primary">Read More &rarr;</a>
+          <div>&nbsp</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+{% else %}
+  <div class="no-padding-white-background" align="center">
+    <div class="container">
+      <div class="col-lg-12">
+        <div class="content">
+          <h1>Unable to find articles which includes: "{{ request.GET.q }}"</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+<div class="gray-background" id="about-me" align="center">
+  <div class="container">
+    <div class="about-me">
+      <div class="col-md-4" data-aos="fade-right">
+        <div class="box">
+          <div class="imgBox">
+            {% load static %}
+            <img src="{% static 'img/profile_blog.jpg' %}" alt="me">
+          </div>
+          <div class="content">
+            <h2>Cigan Oliviu David</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              consequat.
+              <div>&nbsp</div>
+              <a href="https://www.linkedin.com/in/oliviu-david-c-72489015b/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>  <a href="https://www.whatsapp.com/" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a> <a href="https://github.com/CiganOliviu" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a> <a href="https://www.instagram.com/ciganoliviu/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8" data-aos="fade-left">
+        <h1>Clean Coder</h1>
+        <div>&nbsp;</div>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat.          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat.          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat.
+        </p>
+        <div>&nbsp</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer" align="center">
+  <div class="container-fluid">
+    <div class="col-lg-12">
+      <h1 data-aos="fade-up">Have questions? Call 0755577458</h1>
+      <div>&nbsp;</div>
+      <div class="line" data-aos="fade-up"></div>
+      <div>&nbsp;</div>
+      <div class="non-class" data-aos="fade-up">
+        <ul>
+          <a href="/"><li>Home</li></a>
+          <a href="/books/"><li>Books Recommandation</li></a>
+          <a href="/blog/"><li>Personal Blog</li></a>
+        </ul>
+        <div>&nbsp;</div>
+        <div class="social-media">
+          <a href="https://www.linkedin.com/in/oliviu-david-c-72489015b/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>  <a href="https://www.whatsapp.com/" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a> <a href="https://github.com/CiganOliviu" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a> <a href="https://www.instagram.com/ciganoliviu/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div>&nbsp;</div>
+      <h4>Copyright &copy; Cigan Oliviu David all rights reserved</h4>
+    </div>
+  </div>
+</div>
+{% endblock %}
