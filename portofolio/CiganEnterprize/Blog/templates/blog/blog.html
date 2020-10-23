@@ -1,0 +1,84 @@
+{% extends 'views/layouts/main_layout.html' %}
+
+{% block head %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/blog_style.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="blog-cover">
+  <div class="container-fluid" align="center">
+    <div class="col-lg-12">
+      <h1 id="blog-cover-h1">Strong opinions and shared thoughts on design, business, and tech. By the makers.</h1>
+    </div>
+  </div>
+</div>
+
+  <div class="white-background">
+    <div class="container-fluid" align="center" id="brands">
+      <div class="col-lg-12">
+        <div class="mobile-margin-adjust">
+          <h1 class="big-title">Cigan<b>Enterprize</b> Blog</h1>
+          <div>&nbsp;</div>
+          <form class="search-bar" action="{% url 'blog_search' %}" method="get">
+            <input type="text" name="q" value="{{ request.GET.q }}" placeholder="Search an Article"  data-aos="fade-down">
+            <div>&nbsp;</div>
+            <button type="submit" class="btn btn-primary" data-aos="fade-down">Search Article</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  {% for post in post_list %}
+    <div class="container-fluid" align="center">
+      <div class="blog-image" onclick="location.href='{% url 'post_detail' post.slug %}';" style="background-image: url('{{ post.cover_representation.url }}'); cursor:pointer;">
+        <div class="adjust">
+          <h1>{{ post.title }}</h1>
+          <div>&nbsp;</div>
+          <h2>Posted by {{ post.author }}</h2>
+          <div>&nbsp;</div>
+          <h2>{{ post.created_on }}</h2>
+        </div>
+      </div>
+    </div>
+    <div>&nbsp;</div>
+  </div>
+{% endfor %}
+
+<div class="container-fluid" id="footer">
+  <div class="col-lg-12" align="center">
+    <h1 class="big-title">Cigan<b>Enterprize</b> Company<b>Blog</b></h1>
+  </div>
+  <div class="col-lg-6">
+    <div class="footer" align="left">
+      <h2><i class="fas fa-terminal" id="logo_terminal"></i> Cigan<b>Enterprize</b></h2>
+      <div>&nbsp;</div>
+      <p><i class="far fa-copyright"></i> 2020 CiganEnterprize. All rights reserved.</p>
+    </div>
+  </div>
+  <div class="col-lg-6" align="center">
+    <div class="footer">
+      <div class="topnav">
+        <div>&nbsp;</div>
+        <a href="{% url 'employees' %}">Team</a>
+        <a href="{% url 'studio_lister' %}">Studios</a>
+        <a href="{% url 'jobs_lister' %}">Careers</a>
+        <a href="{% url 'newsletter' %}">Newsletter</a>
+        <a href="{% url 'formular_contact' %}">Contact</a>
+        <a href="{% url 'events' %}">Events</a>
+        <a href="{% url 'internships_lister' %}"><b>Intern</b>Ships</a>
+        <a href="{% url 'blog_name' %}">Company<b>Blog</b></a>
+      </div>
+      <div class="social-media">
+        <a href="#"><i class="fab fa-linkedin"></i> </a>
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
