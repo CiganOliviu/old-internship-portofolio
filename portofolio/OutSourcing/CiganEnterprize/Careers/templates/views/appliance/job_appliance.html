@@ -1,0 +1,83 @@
+{% extends 'views/layouts/main_layout.html' %}
+
+{% block head %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/appliance_form.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="white-background">
+  <div class="container-fluid" align="center">
+    <div class="col-lg-6">
+      <div class="side-wallpaper-job" align="center">
+        <div class="container-fluid">
+          <div class="col-lg-12">
+            <h1 class="big-title">Cigan <b>Enterprize</b> Job Appliance</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>&nbsp;</div>
+    <div class="col-lg-6">
+      <div class="contact">
+
+        <h1 class="big-title">Send us your appliance</h1>
+        <div>&nbsp;</div>
+
+        <form method="post">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <div>&nbsp;</div>
+          <button class="btn btn-primary" type="submit">Send your Appliance</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" align="center">
+  <div class="col-lg-12">
+    <div class="studios-presentation">
+      <h1 class="big-title">A ground zero for discovery, innovation and co-creation.</h1>
+      <div>&nbsp;</div>
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid" id="footer">
+  <div class="col-lg-6">
+    <div class="footer" align="left">
+      <h2><i class="fas fa-terminal" id="logo_terminal"></i> Cigan<b>Enterprize</b></h2>
+      <div>&nbsp;</div>
+      <p><i class="far fa-copyright"></i> 2020 Cigan<b>Enterprize</b>. All rights reserved.</p>
+    </div>
+  </div>
+  <div class="col-lg-6" align="center">
+    <div class="footer">
+      <div class="topnav">
+        <div>&nbsp;</div>
+        <a href="{% url 'employees' %}">Team</a>
+        <a href="{% url 'studio_lister' %}">Studios</a>
+        <a href="{% url 'jobs_lister' %}">Careers</a>
+        <a href="{% url 'newsletter' %}">Newsletter</a>
+        <a href="{% url 'formular_contact' %}">Contact</a>
+        <a href="{% url 'events' %}">Events</a>
+        <a href="{% url 'internships_lister' %}"><b>Intern</b>Ships</a>
+        <a href="{% url 'blog_name' %}">Company<b>Blog</b></a>
+      </div>
+      <div class="social-media">
+        <a href="#"><i class="fab fa-linkedin"></i> </a>
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
