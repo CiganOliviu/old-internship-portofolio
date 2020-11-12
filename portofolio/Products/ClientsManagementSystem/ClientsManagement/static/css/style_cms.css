@@ -1,0 +1,354 @@
+.content p {
+    font-size: 19px;
+}
+
+.content h3 {
+    font-size: 22px;
+}
+
+.content h1 {
+    font-weight: bold;
+}
+
+#content {
+    margin-top: 5%;
+}
+
+p {
+    font-size: 18px;
+}
+
+.profile img {
+    width: 100%;
+    border-radius: 3%;
+}
+
+.profile h3 {
+    color: #686868;
+}
+
+.profile a {
+    font-size: 18px;
+    color: #1f2227;
+    transition: all 500ms ease;
+    text-decoration: none;
+}
+
+.profile a:hover {
+    color: #3399ff;
+    transition: all 500ms ease;
+}
+
+.GeneralPresentationProjects {
+    border: 1px solid #e6e6e6;
+    border-radius: 3%;
+    padding: 2%;
+}
+
+.GeneralPresentationProjects i {
+    font-size: 15px;
+}
+
+#active-working i {
+    color: #3399ff;
+}
+
+#planned i {
+    color: #b366ff;
+}
+
+#finished i {
+    color: #33cc33;
+}
+
+#requested i {
+    color: #ff0066;
+}
+
+.project {
+    border: 1px solid #e6e6e6;
+    border-radius: 3%;
+    padding: 2%;
+    transition: all 500ms ease;
+}
+.project:hover {
+    box-shadow: 2px 4px 10px 4px #737373;
+    transition: all 500ms ease;
+}
+
+.messages {
+    border: 1px solid #e6e6e6;
+    transition: all 500ms ease;
+    padding: 2%;
+    width: 100%;
+}
+
+.messages b {
+    margin-right: 1%;
+}
+
+.messages:hover {
+    box-shadow: 2px 4px 10px 4px #737373;
+    transition: all 500ms ease;
+}
+
+nav {
+    padding: 20px;
+    background: #1f2227;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li:not(:first-child) {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    display: inline-block;
+    outline: none;
+    color: #ffffff;
+    font-size: 20px;
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    transition: all 500ms ease;
+}
+
+nav ul li a:hover {
+    color: #808080;
+    text-decoration: none;
+    transition: all 500ms ease;
+}
+
+@media screen and (max-width: 800px) {
+
+    .nav-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        background: #1f2227;
+        opacity: 0;
+        transition: all 0.2s ease;
+        pointer-events: none;
+    }
+
+    .nav-container ul {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+    }
+
+    .nav-container ul li {
+        display: block;
+        float: none;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+
+    .nav-container ul li:not(:first-child) {
+        margin-left: 0;
+    }
+
+    .nav-container ul li a {
+        padding: 10px 25px;
+        margin-right: 10%;
+        opacity: 0;
+        color: #fff;
+        font-size: 24px;
+        font-weight: 600;
+        transform: translateY(-20px);
+        transition: all 0.2s ease;
+    }
+
+    .nav-open {
+        position: fixed;
+        right: 10px;
+        top: 10px;
+        display: block;
+        width: 48px;
+        height: 48px;
+        cursor: pointer;
+        z-index: 9999;
+        border-radius: 50%;
+    }
+
+    .nav-open i {
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: #1f2227;
+        border-radius: 2px;
+    }
+
+    .nav-open i:nth-child(1) {
+        margin-top: 16px;
+    }
+
+    .nav-open i:nth-child(2) {
+        margin-top: 4px;
+        opacity: 1;
+    }
+
+    .nav-open i:nth-child(3) {
+        margin-top: 4px;
+    }
+}
+
+#nav:checked + .nav-open {
+    transform: rotate(45deg);
+}
+
+#nav:checked + .nav-open i {
+    background: #fff;
+    transition: transform 0.2s ease;
+}
+
+#nav:checked + .nav-open i:nth-child(1) {
+    transform: translateY(6px) rotate(180deg);
+}
+
+#nav:checked + .nav-open i:nth-child(2) {
+    opacity: 0;
+}
+
+#nav:checked + .nav-open i:nth-child(3) {
+    transform: translateY(-6px) rotate(90deg);
+}
+
+#nav:checked ~ .nav-container {
+    z-index: 9990;
+    opacity: 1;
+}
+
+#nav:checked ~ .nav-container ul li a {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.hidden {
+    display: none;
+}
+
+div .scrollmenu {
+    overflow: auto;
+    white-space: nowrap;
+}
+
+div .scrollmenu a {
+    display: inline-block;
+    text-align: center;
+    color: #1f2227;
+    padding: 18px;
+    text-decoration: none;
+    transition: all 500ms ease;
+    font-size: 20px;
+    border-bottom: 2px solid #ffffff;
+}
+
+div .scrollmenu .active-scroll-menu {
+    border-bottom: 2px solid #3399ff;
+}
+
+div .scrollmenu a:hover {
+    border-bottom: 2px solid #99ccff;
+    transition: all 500ms ease;
+}
+
+form {
+    width: 60%;
+    padding: 2%;
+}
+
+form select {
+    width: 100%;
+}
+
+form textarea {
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 2px 0px;
+    padding-bottom: 5px;
+    border: none;
+    outline: none;
+    border-bottom: 1.5px solid;
+    border-bottom-color: grey;
+    font-weight: 700;
+    color: #000000;
+    opacity: 0.55;
+    padding: 2%;
+}
+
+form input {
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 2px 0px;
+    padding-bottom: 5px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #000000;
+    border-bottom: 1.5px solid;
+    border-bottom-color: grey;
+    font-weight: 700;
+    opacity: 0.55;
+    padding: 2%;
+}
+
+.items label {
+    margin-top: 5%;
+}
+
+#button {
+  padding: 20px 30px;
+  margin-top: 30px;
+  outline: none;
+  border: none;
+  font-size: medium;
+  font-weight: 600;
+  letter-spacing: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  background: rgb(156,180,246);
+  background: radial-gradient(circle, rgba(156,180,246,1) 0%, rgba(93,93,252,1) 51%);
+  color: #ffffff;
+  transition: all 500ms ease;
+}
+
+#button:active {
+  transform: translateY(2px);
+}
+
+#button text {
+  opacity: 0.5;
+}
+
+#button:hover {
+  opacity: 0.6;
+    transition: all 500ms ease;
+}
+
+#info h1 {
+    padding: 2%;
+    font-size: 40px;
+}
+
+.footer {
+    background: #1f2227;
+    color: #ffffff;
+    padding: 3%;
+}
+
+#done_message {
+    margin-top: 20%;
+}
