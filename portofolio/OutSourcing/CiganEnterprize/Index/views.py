@@ -15,6 +15,7 @@ from .client_projects_relationship import (
 
 from .setup_client_profile import create_user_in_client_detail
 
+
 def clients_management_system_index(request):
 
     template_name = 'views/clients_management_system_index.html'

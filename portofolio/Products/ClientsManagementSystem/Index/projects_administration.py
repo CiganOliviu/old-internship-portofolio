@@ -59,7 +59,6 @@ def save_project_from_active_projects_in_finished_projects(user):
                                                                           list_of_functionalities=project.list_of_functionalities,
                                                                           type=project.type)
 
-                print(query_requested_projects)
 
                 query_requested_projects.delete()
 
