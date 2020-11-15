@@ -1,0 +1,35 @@
+body {
+    background: url('/static/imgs/index_wallpaper.jpg');
+  	min-height: 100vh;
+
+	@media (min-width: 768px) {
+		min-height: 20vw;
+	}
+
+	@media (min-width: 1200px) {
+		min-height: 400px;
+	}
+
+  	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+  	background-attachment: fixed;
+}
+
+.container-fluid {
+  padding: 2%;
+  color: #fff;
+  border-radius: 5px;
+  width: 100%;
+  height: auto;
+}
+
+.container-fluid h1 {
+  margin-top: 20vh;
+  font-size: 60px;
+  font-weight: bold;
+  background: #1f2227;
+  opacity: 0.7;
+  padding: 4%;
+}

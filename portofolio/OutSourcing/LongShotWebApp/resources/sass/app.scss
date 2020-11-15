@@ -1,0 +1,236 @@
+body {
+    background: #1f2227;
+    color: #ffffff;
+}
+
+#black-background {
+    background: #000000;
+}
+
+header {
+    position: relative;
+
+    @media (min-width: 768px) {
+        min-height: 20vw;
+    }
+
+    @media (min-width: 1200px) {
+        min-height: 400px;
+    }
+
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    color: #ffffff;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-attachment: fixed;
+}
+
+header video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+    margin-top: 18%;
+    position: relative;
+    z-index: 2;
+}
+
+header .container h1 {
+    font-size: 70px;
+}
+
+header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+nav {
+    padding: 20px;
+    background: #000000;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li:not(:first-child) {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    display: inline-block;
+    outline: none;
+    color: #ffffff;
+    font-size: 20px;
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    transition: all 500ms ease;
+}
+
+nav ul li a:hover {
+    color: #808080;
+    text-decoration: none;
+    transition: all 500ms ease;
+}
+
+@media screen and (max-width: 800px) {
+
+    .nav-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        background: #1f2227;
+        opacity: 0;
+        transition: all 0.2s ease;
+        pointer-events: none;
+    }
+
+    .nav-container ul {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+    }
+
+    .nav-container ul li {
+        display: block;
+        float: none;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+
+    .nav-container ul li:not(:first-child) {
+        margin-left: 0;
+    }
+
+    .nav-container ul li a {
+        padding: 10px 25px;
+        margin-right: 10%;
+        opacity: 0;
+        color: #fff;
+        font-size: 24px;
+        font-weight: 600;
+        transform: translateY(-20px);
+        transition: all 0.2s ease;
+    }
+
+    .nav-open {
+        position: fixed;
+        right: 10px;
+        top: 10px;
+        display: block;
+        width: 48px;
+        height: 48px;
+        cursor: pointer;
+        z-index: 9999;
+        border-radius: 50%;
+    }
+
+    .nav-open i {
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: #1f2227;
+        border-radius: 2px;
+    }
+
+    .nav-open i:nth-child(1) {
+        margin-top: 16px;
+    }
+
+    .nav-open i:nth-child(2) {
+        margin-top: 4px;
+        opacity: 1;
+    }
+
+    .nav-open i:nth-child(3) {
+        margin-top: 4px;
+    }
+}
+
+#nav:checked + .nav-open {
+    transform: rotate(45deg);
+}
+
+#nav:checked + .nav-open i {
+    background: #fff;
+    transition: transform 0.2s ease;
+}
+
+#nav:checked + .nav-open i:nth-child(1) {
+    transform: translateY(6px) rotate(180deg);
+}
+
+#nav:checked + .nav-open i:nth-child(2) {
+    opacity: 0;
+}
+
+#nav:checked + .nav-open i:nth-child(3) {
+    transform: translateY(-6px) rotate(90deg);
+}
+
+#nav:checked ~ .nav-container {
+    z-index: 9990;
+    opacity: 1;
+}
+
+#nav:checked ~ .nav-container ul li a {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+header i {
+    font-size: 24px;
+}
+
+.footer {
+    background: #000000;
+    color: #ffffff;
+    padding: 2%;
+}
+
+.footer a {
+    color: #ffffff;
+}
+
+.footer i {
+    padding: 1%;
+    font-size: 20px;
+    transition: all 500ms ease;
+}
+
+.footer i:hover {
+
+    color: #cc0000;
+    transition: all 500ms ease;
+}

@@ -1,0 +1,66 @@
+{% extends 'layouts/main_layout.html' %}
+
+{% block head %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style_cms.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mobile_adjust_cms.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div align="center">
+    <nav>
+        <input type="checkbox" id="nav" class="hidden"/>
+        <label for="nav" class="nav-open"><i></i><i></i><i></i></label>
+        <div class="nav-container">
+            <ul>
+                <li><a href="{% url 'update_profile' %}">Update Profile</a></li>
+                <li><a href="{% url 'index' %}">Workflow</a></li>
+                <li><a href="{% url 'feedback_page' %}">Feedback</a></li>
+                <li><a href="{% url 'client_messages' %}">Messages</a></li>
+                <li><a href="{% url 'projects_request' %}">Request a Project</a></li>
+                <li><a href="{% url 'projects_handler' %}">All Projects</a></li>
+                <li><a href="{% url 'product_handler' %}">All Products</a></li>
+                <li><a href="{% url 'logout' %}">Logout</a></li>
+                <li><a href="/">Main Platform</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div>
+
+<div class="container-fluid" id="content">
+        <div class="col-lg-12" align="left">
+            <div class="content" align="center">
+                <h1>{{ plannedproject.project_name }}</h1>
+                <div>&nbsp;</div>
+                <p>{{ plannedproject.project_description }}</p>
+                <div>&nbsp;</div>
+                <p>{{ plannedproject.list_of_functionalities }}</p>
+                <div>&nbsp;</div>
+                <h3>Type <i class="fas fa-arrows-alt-h"></i> {{ plannedproject.type }}</h3>
+                <div>&nbsp;</div>
+                <h3>Price <i class="fas fa-arrows-alt-h"></i> {{ plannedproject.price }}</h3>
+                <div>&nbsp;</div>
+                <h3>Working status <i class="fas fa-arrows-alt-h"></i> {{ plannedproject.working_status }}</h3>
+                <div>&nbsp;</div>
+                <h3>Deadline <i class="fas fa-arrows-alt-h"></i> {{ plannedproject.deadline_for_production }}</h3>
+                <div>&nbsp;</div>
+                <h3>When was transferred to Planned Projects <i class="fas fa-arrows-alt-h"></i> {{ plannedproject.date }}</h3>
+                <div>&nbsp;</div>
+                <h3>Classification <i class="fas fa-arrows-alt-h"></i> {{ plannedproject.project_classification }}</h3>
+            </div>
+        </div>
+    </div>
+
+    <div>&nbsp;</div>
+
+    <div class="footer" align="center">
+        <h1>{{ user.username }} Home</h1>
+        <div>&nbsp;</div>
+        <p>Copyright &copy; Cigan<b>Enterprize</b> all rights reserved.</p>
+        <div>&nbsp;</div>
+        <p>Clients Management System</p>
+    </div>
+{% endblock %}
