@@ -1,0 +1,32 @@
+@media(max-width: 800px) {
+
+    nav {
+        height: 0px;
+        padding: 0%;
+    }
+
+    div .scrollmenu a {
+        font-size: 15px;
+    }
+
+    .container-fluid h1 {
+        font-size: 40px;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    .col-lg-4 {
+        padding: 2%;
+        margin-bottom: 2%;
+    }
+
+    .messages {
+        padding: 5%;
+    }
+
+    .content h1 {
+        font-size: 25px;
+    }
+}
