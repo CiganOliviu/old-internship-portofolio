@@ -4,5 +4,5 @@ from . import views
 
 urlpatterns = [
     path('newsletter/', views.NewsletterView.as_view(), name='newsletter'),
-    path('contact/', views.FormularContact.as_view(), name='formular_contact'),
+    path('contact/', views.FormContact.as_view(), name='form_contact'),
 ]

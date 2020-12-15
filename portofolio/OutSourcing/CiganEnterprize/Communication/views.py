@@ -39,10 +39,10 @@ class NewsletterView(generic.TemplateView):
         return render(request, self.final_template_name)
 
 
-class FormularContact(generic.TemplateView):
+class FormContact(generic.TemplateView):
 
-    template_name = 'views/formular/contact.html'
-    final_template_name = 'views/formular/post_contact.html'
+    template_name = 'views/form/contact.html'
+    final_template_name = 'views/form/post_contact.html'
 
     def get(self, request):
 
