@@ -1,0 +1,86 @@
+{% extends 'layouts/main_layout.html' %}
+
+{% block head %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style_cms.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mobile_adjust_cms.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div align="center">
+    <nav>
+        <input type="checkbox" id="nav" class="hidden"/>
+        <label for="nav" class="nav-open"><i></i><i></i><i></i></label>
+        <div class="nav-container">
+            <ul>
+                <li><a href="{% url 'update_profile' %}">Update Profile</a></li>
+                <li><a href="{% url 'index' %}">Workflow</a></li>
+                <li><a href="{% url 'feedback_page' %}">Feedback</a></li>
+                <li><a href="{% url 'client_messages' %}">Messages</a></li>
+                <li><a href="{% url 'projects_request' %}">Request a Project</a></li>
+                <li><a href="{% url 'projects_handler' %}">All Projects</a></li>
+                <li><a href="{% url 'product_handler' %}">All Products</a></li>
+                <li><a href="{% url 'logout' %}">Logout</a></li>
+                <li><a href="/">Main Platform</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div>
+
+<div class="container-fluid" id="content">
+        <div class="col-lg-4" align="left">
+
+            <div class="GeneralPresentationProjects">
+                <h3>Active Working Projects</h3>
+                <div>&nbsp;</div>
+                {% for project in active_working_projects_query %}
+                    <div class="project" id="active-working" onclick="location.href='{% url 'active_working_project_detail' project.active_working_project_slug %}';" style="cursor:pointer;">
+                        <h3><i class="fas fa-circle"></i> {{ project.project_name }}</h3>
+                        <p>Percent done {{ project.percent_done }}</p>
+                        <p>{{ project.project_description| slice:":200" }}...</p>
+                        <p>Deadline on {{ project.deadline }}</p>
+                    </div>
+                    <div>&nbsp;</div>
+                {% endfor %}
+            </div>
+
+            </div>
+
+            <div class="col-lg-4">
+                <div class="GeneralPresentationProjects">
+                    <h3>Planned Projects</h3>
+                    <div>&nbsp;</div>
+                    {% for planned_project in planned_projects_query %}
+                        <div class="project" id="planned" onclick="location.href='{% url 'planned_project_detail' planned_project.planned_project_slug %}';" style="cursor:pointer;">
+                            <h3><i class="fas fa-circle"></i> {{  planned_project.project_name }}</h3>
+                            <p>{{ planned_project.project_description| slice:":200" }}...</p>
+                            <p>Deadline on {{ planned_project.deadline_for_production }}</p>
+                            <p>Status : {{ planned_project.working_status }}</p>
+                        </div>
+                        <div>&nbsp;</div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="GeneralPresentationProjects">
+                    <h3>Finished Projects</h3>
+                    <div>&nbsp;</div>
+                    {% for finished_project in finished_projects_query %}
+                        <div class="project" id="finished" onclick="location.href='{% url 'finished_project_detail' finished_project.finished_project_slug %}';" style="cursor:pointer;">
+                            <h3><i class="fas fa-circle"></i> {{ finished_project.project_name }}</h3>
+                            <p>{{ finished_project.project_description| slice:":200" }}...</p>
+                            <p>{{ finished_project.type }}</p>
+                        </div>
+                        <div>&nbsp;</div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div>&nbsp;</div>
+        </div>
+    </div>
+{% endblock %}
