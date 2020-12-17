@@ -1,0 +1,26 @@
+{% extends 'home/base_loginsys_base.html' %}
+
+{% block head %}
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+{% endblock %}
+
+{% block content %}
+{% load static %}
+<div class="container" align="center" id="container_login">
+  <div class="col-md-12">
+    <div class="login_part">
+      <h1>Login</h1>
+      <form class="form" method="post">
+        <div>&nbsp;</div>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div>&nbsp;</div>
+        <button type="submit">Login</button>
+        <div>&nbsp;</div>
+        <p><a href="{% url 'password_reset' %}">reset password</a></p>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

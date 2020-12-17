@@ -1,0 +1,252 @@
+{% extends 'home/base.html' %}
+
+{% block head %}
+  {% load static %}
+  <script type="text/javascript" lang="javascript" src="{% static 'js/count-down.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+<div class="wallpaper">
+  <div class="welcome">
+    <div class="black-background">
+      <div class="container">
+        <div class="col-lg-12">
+          <div class="welcome-message">
+            <h1>Save the date</h1>
+            <h1 class="message">Oliviu && Cristina</h1>
+            <h1>12.11.2027</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div>&nbsp;</div>
+
+<div class="container" align="center">
+  <div class="col-lg-12">
+    <div class="content">
+      <h1><b>The Story of Love</b></h1>
+
+      <div>&nbsp;</div>
+
+      <p>When you find the one person you can't live without. your soul mate thinks of you & only you. When you are talking to each other, you say the same thing without knowing it.</p>
+    </div>
+  </div>
+</div>
+
+<div>&nbsp;</div>
+
+<div class="container" align="center">
+  <div class="col-md-6">
+    {% load static %}
+    <figure class="snip1104">
+      <img src="{% static 'imgs/oli.jpg' %}" alt="Cigan Oliviu-David" />
+      <figcaption>
+        <h2>Cigan <span> Oliviu David</span></h2>
+      </figcaption>
+      <a href="#"></a>
+    </figure>
+
+    <div>&nbsp;</div>
+
+    <img class="under-photo-description" src="{% static 'imgs/wedding_pngs/men.png' %}">
+
+    <div>&nbsp;</div>
+
+    <h2 class="presentation-date">13.03.2001</h2>
+    <div>&nbsp;</div>
+
+
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+    <div>&nbsp;</div>
+
+    <div class="social-media-presence">
+      <i class="fa fa-linkedin-square" aria-hidden="true"></i> <i class="fa fa-instagram" aria-hidden="true"></i> <i class="fa fa-github" aria-hidden="true"></i>
+    </div>
+    </div>
+
+
+    <div id="small-padding-line" class="col-md-6">
+      {% load static %}
+      <figure class="snip1104 red">
+        <img src="{% static 'imgs/cris.jpg' %}" alt="Nilvan Cristina" />
+        <figcaption>
+          <h2>Nilvan  <span> Cristina</span></h2>
+        </figcaption>
+        <a href="#"></a>
+        </figure>
+
+        <div>&nbsp;</div>
+
+        <img class="under-photo-description" src="{% static 'imgs/wedding_pngs/woman.png' %}">
+
+        <div>&nbsp;</div>
+
+        <h2 class="presentation-date">21.03.2001</h2>
+
+        <div>&nbsp;</div>
+
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <div>&nbsp;</div>
+        <div class="social-media-presence">
+          <i class="fa fa-linkedin-square" aria-hidden="true"></i> <i class="fa fa-instagram" aria-hidden="true"></i> <i class="fa fa-github" aria-hidden="true"></i>
+        </div>
+    </div>
+</div>
+
+<div class="container" align="center">
+    <div class="col-lg-12">
+        <h3 class="lyrics">Venue at Lucy Forks,</h3>
+        <h3 class="lyrics">Patriciafur, United States.</h3>
+
+         <div>&nbsp;</div>
+
+        <h1 class="presentation-date">12.11.2027</h1>
+    </div>
+</div>
+
+<div>&nbsp;</div>
+
+<div class="container" align="center">
+  <div class="col-lg-12">
+    <div class="rsvp">
+      {% if user.is_authenticated %}
+        <a href="{% url 'invitation' %}">Check Invitation Informations</a>
+      {% else %}
+        <a href="{% url 'login' %}">RSVP Now</a>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+
+<div class="container-fluid golden-background" align="center">
+  <div class="col-lg-12">
+      <h1><b>We Are Getting Married</b></h1>
+
+      <div>&nbsp;</div>
+
+      <p>Remaining days for our wedding ceremony, We are expecting all of your presence.</p>
+
+      <div>&nbsp;</div>
+      <div>&nbsp;</div>
+
+      <div class="counter-down">
+        <div class="col-md-3">
+          <div class="counter-white-background">
+            <h1><span id="Days"></span></h1>
+            <h3>Days</h3>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="counter-white-background">
+            <h1><span id="Hours"></span></h1>
+            <h3>Hours</h3>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="counter-white-background">
+            <h1><span id="Minutes"></span></h1>
+            <h3>Minutes</h3>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="counter-white-background">
+            <h1><span id="Seconds"></span></h1>
+            <h3>Seconds</h3>
+          </div>
+        </div>
+      </div>
+
+      <div>&nbsp;</div>
+      <div>&nbsp;</div>
+
+      {% load static %}
+      <img src="{% static 'imgs/wedding_pngs/rings_black_white.png' %}">
+      <h3 class="lyrics">Remaining days for our</h3>
+      <h3 class="lyrics">Wedding ceremony</h3>
+      <div>&nbsp;</div>
+    </div>
+</div>
+
+<div class="container white-background" align="center">
+  <div class="col-lg-12">
+    <div class="content">
+      <h1><b>Photography</b></h1>
+
+      <div>&nbsp;</div>
+
+      <p>A good snapshot at your wedding can stops a moment from running away. </p>
+    </div>
+  </div>
+</div>
+
+{% load static %}
+<div class="container-fluid">
+  <div class="row">
+    <div class="column">
+      <img src="{% static 'imgs/imgs_grid/oli/photos_oli_1.jpg' %}" style="width:100%">
+      <img src="{% static 'imgs/imgs_grid/cris/photos_cris_3.jpg' %}" style="width:100%">
+      <img src="{% static 'imgs/imgs_grid/oli/photos_oli_10.jpg' %}" style="width:100%">
+      <img src="{% static 'imgs/imgs_grid/cris/photos_cris_7.jpg' %}" style="width:100%">
+      <img src="{% static 'imgs/imgs_grid/oli/photos_oli_2.jpg' %}" style="width:100%">
+      <img src="{% static 'imgs/imgs_grid/cris/photos_cris_9.jpg' %}" style="width:100%">
+      <img src="{% static 'imgs/imgs_grid/cris/photos_crs_14.jpg' %}" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="{% static 'imgs/imgs_grid/cris/photos_cris_1.jpg' %}" style="width:100%">
+      <img src="{% static 'imgs/imgs_grid/oli/photos_oli_4.jpg' %}" style="width:100%">
+      <img src="{% static 'imgs/imgs_grid/cris/photos_cris_5.jpg' %}" style="width:100%">
+      <img src="{% static 'imgs/imgs_grid/oli/photos_oli_14.jpg' %}" style="width:100%">
+      <img src="{% static 'imgs/imgs_grid/cris/photos_cris_10.jpg' %}" style="width:100%">
+      <img src="{% static 'imgs/imgs_grid/oli/photos_oli_11.jpg' %}" style="width:100%">
+      <img src="{% static 'imgs/imgs_grid/oli/photos_oli_13.jpg' %}" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="{% static 'imgs/imgs_grid/oli/photos_oli_3.jpg' %}" style="width:100%">
+      <img src="{% static 'imgs/imgs_grid/cris/photos_cris_4.jpg' %}" style="width:100%">
+      <img src="{% static 'imgs/imgs_grid/oli/photos_oli_6.jpg' %}" style="width:100%">
+      <img src="{% static 'imgs/imgs_grid/cris/photos_cris_8.jpg' %}" style="width:100%">
+      <img src="{% static 'imgs/imgs_grid/oli/photos_oli_12.jpg' %}" style="width:100%">
+      <img src="{% static 'imgs/imgs_grid/cris/photos_cris_12.jpg' %}" style="width:100%">
+      <img src="{% static 'imgs/imgs_grid/oli/photos_oli_7.jpg' %}" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="{% static 'imgs/imgs_grid/cris/photos_cris_2.jpg' %}" style="width:100%">
+      <img src="{% static 'imgs/imgs_grid/oli/photos_oli_5.jpg' %}" style="width:100%">
+      <img src="{% static 'imgs/imgs_grid/cris/photos_cris_6.jpg' %}" style="width:100%">
+      <img src="{% static 'imgs/imgs_grid/oli/photos_oli_8.jpg' %}" style="width:100%">
+      <img src="{% static 'imgs/imgs_grid/cris/photos_cris_11.jpg' %}" style="width:100%">
+      <img src="{% static 'imgs/imgs_grid/oli/photos_oli_9.jpg' %}" style="width:100%">
+      <img src="{% static 'imgs/imgs_grid/cris/photos_crs_13.jpg' %}" style="width:100%">
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid golden-background" align="center">
+  <div class="col-lg-12">
+      <div class="rsvp">
+        <h1>You Are Invited</h1>
+
+        <div>&nbsp;</div>
+
+        <p>This form will help us to pre-plan our wedding event with your presence please fill out this.</p>
+
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+
+        {% if user.is_authenticated %}
+          <a href="{% url 'invitation' %}">Check Invitation Informations</a>
+        {% else %}
+          <a href="{% url 'login' %}">Répondez s’il vous plaît</a>
+        {% endif %}
+      </div>
+  </div>
+</div>
+
+{% endblock %}
