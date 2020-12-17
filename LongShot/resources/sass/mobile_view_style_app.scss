@@ -1,0 +1,33 @@
+@media screen and (max-width: 800px) {
+
+    nav {
+        padding: 0;
+    }
+
+    header .presentation h1 {
+        font-size: 60px;
+    }
+
+    header .presentation i {
+        padding: 3%;
+    }
+
+    .content .red-wrapped-cut {
+        width: auto;
+        padding: 6%;
+    }
+
+    form input {
+        width: 100%;
+        padding: 3%;
+    }
+
+    form textarea {
+        width: 100%;
+        padding: 3%;
+    }
+
+    form button {
+        width: 100%;
+    }
+}
