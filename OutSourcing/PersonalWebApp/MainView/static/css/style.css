@@ -841,7 +841,7 @@ section.model-4 .graph:before {
 }
 
 .box-project .box-content .post i {
-	font-size: 25px;
+	font-size: 30px;
 	color: #ffffff;
 	transition: all 500ms ease;
 }
@@ -859,32 +859,32 @@ section.model-4 .graph:before {
 }
 
 .books img {
-      width: 60%;
-      padding: 2%;
-      height: auto;
+    width: 60%;
+    padding: 2%;
+    height: auto;
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
     transition: all 300ms ease-out;
 }
 
 .books img:hover {
-  transform: scale(1.1);
-	-webkit-filter: grayscale(0%);
-	filter: grayscale(0%);
-  transition: all 300ms ease-out;
+    transform: scale(1.1);
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+    transition: all 300ms ease-out;
 }
 
 .btn {
-  font-size: 18px;
-  color: #ffffff;
-  background: #4584b6;
-  border: none;
-  transition: all 500ms ease-out;
+    font-size: 18px;
+    color: #ffffff;
+    background: #4584b6;
+    border: none;
+    transition: all 500ms ease-out;
 }
 
 .btn:hover {
-  background: #262626;
-  transition: all 500ms ease-out;
+    background: #262626;
+    transition: all 500ms ease-out;
 }
 
 .hover-a {
@@ -933,17 +933,17 @@ section.model-4 .graph:before {
 }
 
 .footer i {
-  margin-left: 1%;
-  font-size: 25px;
-  transition: all 500ms ease-out;
-  padding: 1%;
-  color: #ffffff;
-  border: #ffffff 2px solid;
-  border-radius: 75%;
+    margin-left: 1%;
+    font-size: 25px;
+    transition: all 500ms ease-out;
+    padding: 1%;
+    color: #ffffff;
+    border: #ffffff 2px solid;
+    border-radius: 75%;
 }
 
 .footer i:hover {
 	color: #000000;
-  background: #ffffff;
-  transition: all 500ms ease-out;
+    background: #ffffff;
+    transition: all 500ms ease-out;
 }

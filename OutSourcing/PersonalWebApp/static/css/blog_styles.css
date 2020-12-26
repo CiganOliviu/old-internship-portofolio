@@ -67,3 +67,10 @@ input {
 	width: 100%;
 	height: auto;
 }
+
+@media(max-width: 800px) {
+
+	.card-body img {
+		width: 80%;
+	}
+}
