@@ -36,6 +36,16 @@
     .rsvp a {
         padding: 3%;
     }
+
+    .special-people .col-lg-3 {
+
+        margin-top: 7%;
+    }
+
+    #first-child {
+
+        margin-top: 0;
+    }
 }
 
 @media screen and (max-width: 600px) {
