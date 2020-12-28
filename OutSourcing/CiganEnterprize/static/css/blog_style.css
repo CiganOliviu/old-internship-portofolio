@@ -93,14 +93,4 @@
   height: auto;
 }
 
-.get_tickets {
-  font-size: 25px;
-  transition: all 300ms ease-in-out;
-}
-
-.get_tickets:hover {
-  color: #4584b6;
-  transition: all 300ms ease-in-out;
-}
-
 /*# sourceMappingURL=blog_style.css.map */

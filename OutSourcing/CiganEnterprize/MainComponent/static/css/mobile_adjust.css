@@ -51,6 +51,10 @@
   .contact select {
     font-size: 15px;
   }
+
+  .footer {
+    text-align: center;
+  }
 }
 @media (max-width: 800px) {
   .header li a {
@@ -59,6 +63,11 @@
   }
 
   #white-right-polygon-wallpaper-color {
+    background: #ffffff;
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 100%, 0 99%, 0% 50%);
+  }
+
+  #white-left-polygon-wallpaper-color {
     background: #ffffff;
     clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 100%, 0 99%, 0% 50%);
   }

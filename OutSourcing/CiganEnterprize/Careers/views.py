@@ -30,7 +30,10 @@ def search_jobs_view(request):
 
     query = request.GET.get('q')
 
-    results = query and get_data_from_available_job(query) or redirect('/jobs')
+    if query:
+        results = get_data_from_available_job(query)
+    else:
+        redirect('/jobs')
 
     context = {
         'studios_result': studios_result,
@@ -137,7 +140,10 @@ def search_internships_views(request):
 
     query = request.GET.get('q')
 
-    results = query and get_data_from_available_internship(query) or redirect('/internships');
+    if query:
+        results = get_data_from_available_internship(query)
+    else:
+        redirect('/internships')
 
     context = {
         'studios_result': studios_result,

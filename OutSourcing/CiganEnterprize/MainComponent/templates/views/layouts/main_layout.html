@@ -21,6 +21,7 @@
   {% load static %}
   <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
   <link rel="stylesheet" type="text/css" href="{% static 'css/mobile_adjust.css' %}">
+  <link rel="icon" type="image/gif" href="{% static 'imgs/CiganEnterprizeFavicon.png' %}" sizes="16x16">
   {% block head %}
 
   {% endblock %}
@@ -42,7 +43,7 @@
       <li><a class="from-left" href="{% url 'events' %}"><i class="fas fa-calendar-alt"></i> Events</a></li>
       <li><a class="from-left" href="{% url 'internships_lister' %}"><i class="fas fa-people-carry"></i> <b>Intern</b>Ship</a></li>
       <li><a class="from-left" href="{% url 'blog_name' %}"><i class="fas fa-blog"></i> Company<b>Blog</b></a></li>
-      <li><a class="from-left" href="{% url 'clients_management_system_index' %}"><i class="fas fa-mug-hot"></i> Get into your Client Account</a></li>
+      <li><a class="from-left" href="{% url 'clients_management_system_index' %}"><i class="fas fa-mug-hot"></i> Client Account</a></li>
     </ul>
   </header>
 

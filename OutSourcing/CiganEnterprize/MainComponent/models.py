@@ -12,7 +12,10 @@ CAREER = (
     ("Web Developer", "Web Developer"),
     ("Web Designer", "Web Designer"),
     ("Mobile Developer", "Mobile Developer"),
+    ("Founder", "Founder"),
+    ("CoFounder", "CoFounder"),
 )
+
 
 class Studio(models.Model):
 
