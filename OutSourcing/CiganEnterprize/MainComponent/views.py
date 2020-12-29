@@ -4,7 +4,7 @@ from django.views import generic
 from . import events_management
 from . import update_date
 
-from .models import Studio, Employer
+from .models import Studio, Employer, Project
 
 from Careers.models import (
     AvailableJob,
@@ -60,6 +60,19 @@ def employees(request):
 
     context = {
         'employers_results': employers_results,
+    }
+
+    return render(request, template_name, context)
+
+
+def projects(request):
+
+    template_name = 'views/projects/projects.html'
+
+    projects_results = Project.objects.all()
+
+    context = {
+        'projects_results' : projects_results,
     }
 
     return render(request, template_name, context)

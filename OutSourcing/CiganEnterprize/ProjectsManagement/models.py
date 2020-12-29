@@ -4,6 +4,7 @@ from datetime import datetime
 
 from Index.slugify import *
 
+
 TYPE_OF_APPS = (
     ("Presentation WebSite", "Presentation WebSite"),
     ("WebApp", "Webapp"),

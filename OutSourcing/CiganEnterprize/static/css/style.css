@@ -713,6 +713,15 @@ a:hover {
     margin-bottom: 30px !important;
   }
 }
+.projects img {
+  width: 100%;
+}
+
+.projects {
+  font-family: "Roboto", sans-serif;
+  padding: 2%;
+}
+
 #footer {
   background: #000000;
   color: #ffffff;

@@ -1,4 +1,5 @@
 from django.db import models
+from ProjectsManagement.models import TYPE_OF_APPS
 
 COUNTRY = (
     ("Romania", "Romania"),
@@ -56,3 +57,14 @@ class Employer(models.Model):
 
     def __str__(self):
         return self.first_name + " " + self.last_name
+
+
+class Project(models.Model):
+
+    id = models.AutoField(primary_key=True)
+    name_of_project = models.CharField(max_length=150)
+    project_image = models.ImageField(upload_to='projects_images/')
+    field = models.CharField(max_length=150, choices=TYPE_OF_APPS)
+
+    def __str__(self):
+        return self.name_of_project
