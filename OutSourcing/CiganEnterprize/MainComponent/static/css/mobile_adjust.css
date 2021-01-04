@@ -52,6 +52,13 @@
     font-size: 15px;
   }
 
+  .projects h1 {
+    font-size: 30px;
+  }
+  .projects h3 {
+    font-size: 25px;
+  }
+
   .footer {
     text-align: center;
   }

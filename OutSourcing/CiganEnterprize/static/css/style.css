@@ -238,7 +238,7 @@ a:hover {
   top: 0;
 }
 
-@media (min-width: 50em) {
+@media (min-width: 800px) {
   .header li {
     float: left;
   }
