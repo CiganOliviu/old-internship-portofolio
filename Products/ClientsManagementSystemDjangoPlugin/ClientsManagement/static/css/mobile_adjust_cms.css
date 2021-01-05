@@ -29,4 +29,8 @@
     .content h1 {
         font-size: 25px;
     }
+
+    .items a {
+        font-size: 14px;
+    }
 }
