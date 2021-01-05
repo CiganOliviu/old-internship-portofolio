@@ -309,6 +309,10 @@ form input {
     margin-top: 5%;
 }
 
+.items input {
+    margin-top: 2%;
+}
+
 #button {
   padding: 20px 30px;
   margin-top: 30px;
