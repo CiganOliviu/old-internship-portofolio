@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery</title>
+</head>
+<body>
+    <h1>Gallery</h1>
+
+    {% for image in  images_for_platform %}
+        <img src="{{ image.image.url }}" alt="image" width="300px" height="auto">
+    {% endfor %}
+</body>
+</html>

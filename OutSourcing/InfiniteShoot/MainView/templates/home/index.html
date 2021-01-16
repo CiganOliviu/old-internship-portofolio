@@ -1,0 +1,70 @@
+{% extends 'layouts/main_layout.html' %}
+
+{% block content %}
+
+        <div class="first-container">
+
+            <input type="checkbox" id="nav" class="hidden"/>
+            <label for="nav" class="nav-open"><i></i><i></i><i></i></label>
+
+            <div class="nav-container">
+
+                <div class="nav-row">
+                    <div class="nav-logo">
+                    <p href="#">
+                      InfiniteShoot
+                    </p>
+                  </div>
+                  <div class="nav-controls">
+                      <a href="{% url 'blog_view' %}">Blog</a>
+                      <a href="{% url 'contact_view' %}">Contact</a>
+                      <a href="{% url 'gallery_view' %}">Gallery</a>
+                      <a href="{% url 'login' %}">Login</a>
+                  </div>
+              </div>
+        </div>
+
+        <div>&nbsp;</div><div>&nbsp;</div>
+
+        <div class="container-fluid" align="center">
+            <div class="col-lg-12">
+                <div class="introduction">
+                    <h1>Make your memories matter more!</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+      <div class="container">
+        <div class="row">
+          <h1>
+            Fixed &amp; Transparent Nav
+          </h1>
+          <p>
+            The man in black fled across the desert and the gunslinger followed.
+          </p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <h1>
+            Section
+          </h1>
+          <p>
+            The man in black fled across the desert and the gunslinger followed.
+          </p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <h1>
+            Section
+          </h1>
+          <p>
+            The man in black fled across the desert and the gunslinger followed.
+          </p>
+        </div>
+      </div>
+{% endblock %}

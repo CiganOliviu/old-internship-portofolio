@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+</head>
+<body>
+    <h1>Blog View</h1>
+    <div>&nbsp;</div>
+
+     <form action="{% url 'blog_view_results' %}" method="get">
+         <label>
+             <input type="text" name="q" value="{{ request.GET.q }}" placeholder="Search an Article">
+         </label>
+         <div>&nbsp;</div>
+        <button type="submit">Search Article</button>
+      </form>
+
+    <div>&nbsp;</div>
+    {% for post in  post_list %}
+        <h1>{{ post.title }}</h1>
+        <h2>{{  post.author }}</h2>
+        <h2> {{ post.created_on }}</h2>
+        <a href="{% url 'blog_post_detail' post.slug %}">Read more</a>
+        <div>&nbsp;</div>
+    {% endfor %}
+</body>
+</html>

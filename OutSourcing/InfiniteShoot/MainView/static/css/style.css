@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital@1&display=swap');
+
+html,
+body {
+  height: 100%;
+  color: #666666;
+  font-family: "Open Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+}
+
+a {
+    display: inline-block;
+    list-style: none;
+    text-decoration: none;
+    color: #fff;
+    transition: opacity 0.125s linear;
+}
+
+a:hover {
+    color: #fff;
+    opacity: 0.5;
+    cursor: pointer;
+    text-decoration: none;
+    transition: opacity 0.125s linear;
+}
+
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+.first-container {
+    width: 100%;
+    height: 100%;
+    -webkit-animation: slide 10s -10s infinite;
+    display: block;
+}
+
+
+@keyframes xfade {
+
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    33% {opacity: 1;}
+    53% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+@-webkit-keyframes slide {
+
+    0% {
+
+        background: url('../imgs/main_wallpaper_1.jpg') no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        -webkit-animation: xfade 15s -10s infinite;
+    }
+
+    50% {
+        background: url('../imgs/main_wallpaper_2.jpg') no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        -webkit-animation: xfade 15s -10s infinite;
+    }
+
+    75% {
+        background: url('../imgs/main_wallpaper_3.jpg') no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        -webkit-animation: xfade 15s -10s infinite;
+    }
+
+    100% {
+
+        background: url('../imgs/main_wallpaper_1.jpg') no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        -webkit-animation: xfade 15s -10s infinite;
+    }
+}
+
+@-moz-keyframes slide {
+
+    0% {
+
+        background: url('../imgs/main_wallpaper_1.jpg') no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        -webkit-animation: xfade 15s -10s infinite;
+    }
+
+    50% {
+        background: url('../imgs/main_wallpaper_2.jpg') no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        -webkit-animation: xfade 15s -10s infinite;
+    }
+
+    75% {
+        background: url('../imgs/main_wallpaper_3.jpg') no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        -webkit-animation: xfade 15s -10s infinite;
+    }
+
+    100% {
+
+        background: url('../imgs/main_wallpaper_1.jpg') no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        -webkit-animation: xfade 15s -10s infinite;
+    }
+}
+
+@keyframes slide {
+
+    0% {
+
+        background: url('../imgs/main_wallpaper_1.jpg') no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        -webkit-animation: xfade 15s -10s infinite;
+    }
+
+    50% {
+        background: url('../imgs/main_wallpaper_2.jpg') no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        -webkit-animation: xfade 15s -10s infinite;
+    }
+
+    75% {
+        background: url('../imgs/main_wallpaper_3.jpg') no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        -webkit-animation: xfade 15s -10s infinite;
+    }
+
+    100% {
+
+        background: url('../imgs/main_wallpaper_1.jpg') no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        -webkit-animation: xfade 15s -10s infinite;
+    }
+}
+
+.nav-container {
+  margin-top: -2%;
+  height: auto;
+  padding: 1%;
+  width: 100%;
+  position: fixed;
+  color: white;
+  letter-spacing: 0.025em;
+  transition: background-color 0.2s linear;
+}
+
+.nav-container.solid-nav {
+    background-color: #000000;
+    opacity: 0.7;
+    transition: background-color 0.2s linear;
+}
+
+.nav-container .nav-row {
+    width: 100%;
+    margin: 0 auto;
+    padding-right: 25px;
+    padding-top: 25px;
+}
+
+.nav-container .nav-row .nav-logo {
+    display: inline-block;
+    font-weight: 900;
+    font-size: 25px;
+    letter-spacing: 0.2em;
+}
+
+.nav-container .nav-row .nav-controls {
+  float: right;
+}
+
+.nav-container .nav-row .nav-controls a {
+    padding-left: 20px;
+    font-size: 18px;
+}
+
+.container {
+  padding-top: 150px;
+  padding-bottom: 150px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.row {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 800px) {
+
+    .nav-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        background: #000000;
+        opacity: 0;
+        transition: all 0.2s ease;
+    }
+
+    .nav-container .nav-row {
+        max-width: 1200px;
+    }
+
+    .nav-container .nav-controls {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        display: block;
+        float: none;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .nav-container .nav-controls a {
+        display: block;
+        margin-top: 5%;
+        margin-right: 10%;
+        color: #fff;
+        font-size: 22px;
+        font-weight: 600;
+        transform: translateY(-20px);
+        transition: all 0.2s ease;
+    }
+
+    .nav-open {
+        position: fixed;
+        right: 10px;
+        top: 10px;
+        display: block;
+        width: 48px;
+        height: 48px;
+        cursor: pointer;
+        z-index: 9999;
+        border-radius: 50%;
+    }
+
+    .nav-open i {
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: #ffffff;
+        border-radius: 2px;
+    }
+
+    .nav-open i:nth-child(1) {
+        margin-top: 16px;
+    }
+
+    .nav-open i:nth-child(2) {
+        margin-top: 4px;
+        opacity: 1;
+    }
+
+    .nav-open i:nth-child(3) {
+        margin-top: 4px;
+    }
+}
+
+#nav:checked + .nav-open {
+    transform: rotate(45deg);
+}
+
+#nav:checked + .nav-open i {
+    background: #fff;
+    transition: transform 0.2s ease;
+}
+
+#nav:checked + .nav-open i:nth-child(1) {
+    transform: translateY(6px) rotate(180deg);
+}
+
+#nav:checked + .nav-open i:nth-child(2) {
+    opacity: 0;
+}
+
+#nav:checked + .nav-open i:nth-child(3) {
+    transform: translateY(-6px) rotate(90deg);
+}
+
+#nav:checked ~ .nav-container {
+    z-index: 9990;
+    opacity: 1;
+}
+
+#nav:checked ~ .nav-container ul li a {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.introduction h1 {
+    margin-top: 40%;
+    color: #ffffff;
+    font-size: 60px;
+    font-family: 'Raleway', sans-serif;
+}
