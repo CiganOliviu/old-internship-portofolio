@@ -1,0 +1,39 @@
+{% extends 'layouts/main_layout.html' %}
+
+{% block head %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/css/style_cms.css' %}">
+    <link rel="stylesheet" href="{% static '/css/mobile_adjust_cms.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div align="center">
+        <nav>
+            <input type="checkbox" id="nav" class="hidden"/>
+            <label for="nav" class="nav-open"><i></i><i></i><i></i></label>
+            <div class="nav-container">
+                <ul>
+                    <li><a href="{% url 'update_profile' %}">Update Profile</a></li>
+                    <li><a href="{% url 'index' %}">Workflow</a></li>
+                    <li><a href="{% url 'feedback_page' %}">Feedback</a></li>
+                    <li><a href="{% url 'client_messages' %}">Messages</a></li>
+                    <li><a href="{% url 'projects_request' %}">Request a Project</a></li>
+                    <li><a href="{% url 'projects_handler' %}">All Projects</a></li>
+                    <li><a href="{% url 'product_handler' %}">All Products</a></li>
+                    <li><a href="{% url 'logout' %}">Logout</a></li>
+                    <li><a href="/">Main Platform</a></li> 
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div>&nbsp;</div>
+
+    <div id='done_message' class="footer" align="center">
+        <h1>{{ user.username }}, Your Credentials were updated.</h1>
+        <div>&nbsp;</div>
+        <p>Copyright &copy; Cigan<b>Enterprize</b> all rights reserved.</p>
+        <div>&nbsp;</div>
+        <p>Clients Management System</p>
+    </div>
+{% endblock %}
