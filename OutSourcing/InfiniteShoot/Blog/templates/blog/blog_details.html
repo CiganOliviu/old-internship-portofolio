@@ -1,0 +1,79 @@
+{% extends 'layouts/main_layout.html' %}
+
+{% block content %}
+    <div class="blog_parallax" style="background-image: url('{{ post.wallpaper_representation.url }}')";>
+
+        <input type="checkbox" id="nav" class="hidden"/>
+        <label for="nav" class="nav-open"><i></i><i></i><i></i></label>
+
+        <div class="nav-container">
+
+            <div class="nav-row">
+                <div class="nav-logo">
+                    <a href="{% url 'index' %}">
+                        <p>
+                            <i class="fas fa-infinity"></i> InfiniteShoot
+                        </p>
+                    </a>
+              </div>
+               {% if user.is_authenticated %}
+                <div class="nav-controls">
+                    <a href="{% url 'blog_view' %}">Blog</a>
+                    <a href="{% url 'contact_view' %}">Contact</a>
+                    <a href="{% url 'gallery_view' %}">InfiniteShoot Gallery</a>
+                    <a href="{% url 'personal_gallery_view' %}">Your Gallery</a>
+                    <a href="{% url 'password_change' %}">Change your password</a>
+                    <a href="{% url 'logout' %}">Logout</a>
+                </div>
+            {% else %}
+                <div class="nav-controls">
+                    <a href="{% url 'blog_view' %}">Blog</a>
+                    <a href="{% url 'contact_view' %}">Contact</a>
+                    <a href="{% url 'gallery_view' %}">Gallery</a>
+                    <a href="{% url 'login' %}">Login</a>
+                </div>
+            {% endif %}
+          </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="col-lg-12">
+            <div class="blog-content">
+                <h1>{{ post.title }}</h1>
+                <div>&nbsp;</div>
+                <p>{{ post.introduction }}</p>
+                <div>&nbsp;</div>
+                <h2>{{ post.sub_title_one }}</h2>
+                <div>&nbsp;</div>
+                <p>{{ post.sub_content_one }}</p>
+
+                <div>&nbsp;</div>
+                <h2>{{ post.sub_title_two }}</h2>
+                <div>&nbsp;</div>
+                <p>{{ post.sub_content_two }}</p>
+
+                <div>&nbsp;</div>
+                <h2>{{ post.sub_title_three }}</h2>
+                <div>&nbsp;</div>
+                <p>{{ post.sub_content_three }}</p>
+
+                <div>&nbsp;</div>
+                <h2>{{ post.sub_title_four }}</h2>
+                <div>&nbsp;</div>
+                <p>{{ post.sub_content_four }}</p>
+
+                <div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div>
+
+                <div class="blog-details" align="center">
+                    <h2>&copy; {{  post.author }}</h2>
+                    <div>&nbsp;</div>
+                    <h2>Posted on {{ post.created_on }}</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% load static %}
+    <script type="text/javascript" language="JavaScript" src="{% static 'js/blog-parallax-menu-opacity-on-scroll.js' %}"></script>
+{% endblock %}

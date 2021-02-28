@@ -1,0 +1,93 @@
+.parallax_gallery {
+    height: 70vh;
+    width: 100%;
+    background-image: url("../imgs/parallax_gallery.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    background-position: 50% 50%;
+}
+
+.tz-gallery {
+  overflow: hidden;
+}
+
+.tz-gallery .row > div {
+  padding: 2px;
+}
+
+.tz-gallery .lightbox:hover:after,
+.tz-gallery .lightbox:hover:before {
+  opacity: 1;
+}
+
+.baguetteBox-button {
+  background-color: transparent !important;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 0;
+  }
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.column {
+  -ms-flex: 25%;
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+    width: 100%;
+    margin-top: 8px;
+    vertical-align: middle;
+}
+
+.column .picked_image_style {
+    width: 100%;
+    margin-top: 8px;
+    vertical-align: middle;
+    transition: all 300ms ease;
+}
+
+.column .picked_image_style:hover {
+    opacity: 0.5;
+}
+
+.highlight a {
+    font-size: 27px;
+    padding: 2%;
+}
+
+.detail_image img {
+    width: 80%;
+}
+
+.our-thoughts h2 {
+    text-align: center;
+    font-size: 40px;
+}
+
+.our-thoughts p {
+    font-size: 18px;
+}
+
+.empty_parallax_setup {
+    height: 0;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    background-position: 50% 50%;
+}

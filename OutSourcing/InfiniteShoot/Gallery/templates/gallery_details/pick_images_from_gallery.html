@@ -1,0 +1,96 @@
+{% extends 'layouts/main_layout.html' %}
+
+{% block head %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/gallery_style.css' %}">
+{% endblock %}
+
+{% block content %}
+
+    <div class="parallax_gallery">
+
+        <input type="checkbox" id="nav" class="hidden"/>
+        <label for="nav" class="nav-open"><i></i><i></i><i></i></label>
+
+        <div class="nav-container">
+
+            <div class="nav-row">
+                <div class="nav-logo">
+                    <a href="{% url 'index' %}">
+                        <p>
+                            <i class="fas fa-infinity"></i> InfiniteShoot
+                        </p>
+                    </a>
+                </div>
+                {% if user.is_authenticated %}
+                    <div class="nav-controls">
+                        <a href="{% url 'blog_view' %}">Blog</a>
+                        <a href="{% url 'contact_view' %}">Contact</a>
+                        <a href="{% url 'gallery_view' %}">InfiniteShoot Gallery</a>
+                        <a href="{% url 'personal_gallery_view' %}">Your Gallery</a>
+                        <a href="{% url 'password_change' %}">Change your password</a>
+                        <a href="{% url 'logout' %}">Logout</a>
+                    </div>
+                {% else %}
+                    <div class="nav-controls">
+                        <a href="{% url 'blog_view' %}">Blog</a>
+                        <a href="{% url 'contact_view' %}">Contact</a>
+                        <a href="{% url 'gallery_view' %}">Gallery</a>
+                        <a href="{% url 'login' %}">Login</a>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <div>&nbsp;</div><div>&nbsp;</div>
+
+        <div class="container-fluid" align="center">
+            <div class="col-lg-12">
+                <div class="part-parallax-introduction">
+                    <h1>Pick your preferred photos for the album!</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>&nbsp;</div>
+
+    <div class="container-fluid">
+        <div class="col-lg-12">
+                <div class="row">
+                    <div class="column">
+                        {% for image in  images_first_column_client_query %}
+                            <img class="picked_image_style" src="{{ image.image.url }}" alt="image"
+                                 onclick="location.href='{% url 'choose_preferred_photos_detail_view' image.image_slug %}';"
+                                 style="cursor:pointer;">
+                        {% endfor %}
+                    </div>
+                    <div class="column">
+                        {% for image in  images_second_column_client_query %}
+                            <img class="picked_image_style" src="{{ image.image.url }}" alt="image"
+                                 onclick="location.href='{% url 'choose_preferred_photos_detail_view' image.image_slug %}';"
+                                 style="cursor:pointer;">
+                        {% endfor %}
+                    </div>
+                    <div class="column">
+                        {% for image in  images_third_column_client_query %}
+                            <img class="picked_image_style" src="{{ image.image.url }}" alt="image"
+                                 onclick="location.href='{% url 'choose_preferred_photos_detail_view' image.image_slug %}';"
+                                 style="cursor:pointer;">
+                        {% endfor %}
+                    </div>
+                    <div class="column">
+                        {% for image in  images_fourth_column_client_query %}
+                            <img class="picked_image_style" src="{{ image.image.url }}" alt="image"
+                                 onclick="location.href='{% url 'choose_preferred_photos_detail_view' image.image_slug %}';"
+                                 style="cursor:pointer;">
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    {% load static %}
+    <script type="text/javascript" language="JavaScript" src="{% static 'js/gallery-parallax-menu-opacity-on-scroll.js' %}"></script>
+
+{% endblock %}

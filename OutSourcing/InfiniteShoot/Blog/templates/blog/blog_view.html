@@ -1,0 +1,96 @@
+{% extends 'layouts/main_layout.html' %}
+
+{% block content %}
+    <div class="blog_parallax">
+
+        <input type="checkbox" id="nav" class="hidden"/>
+        <label for="nav" class="nav-open"><i></i><i></i><i></i></label>
+
+        <div class="nav-container">
+
+            <div class="nav-row">
+                <div class="nav-logo">
+                    <a href="{% url 'index' %}">
+                        <p>
+                            <i class="fas fa-infinity"></i> InfiniteShoot
+                        </p>
+                    </a>
+              </div>
+               {% if user.is_authenticated %}
+                <div class="nav-controls">
+                    <a href="{% url 'blog_view' %}">Blog</a>
+                    <a href="{% url 'contact_view' %}">Contact</a>
+                    <a href="{% url 'gallery_view' %}">InfiniteShoot Gallery</a>
+                    <a href="{% url 'personal_gallery_view' %}">Your Gallery</a>
+                    <a href="{% url 'password_change' %}">Change your password</a>
+                    <a href="{% url 'logout' %}">Logout</a>
+                </div>
+            {% else %}
+                <div class="nav-controls">
+                    <a href="{% url 'blog_view' %}">Blog</a>
+                    <a href="{% url 'contact_view' %}">Contact</a>
+                    <a href="{% url 'gallery_view' %}">Gallery</a>
+                    <a href="{% url 'login' %}">Login</a>
+                </div>
+            {% endif %}
+          </div>
+        </div>
+
+        <div>&nbsp;</div><div>&nbsp;</div>
+
+        <div class="container-fluid" align="center">
+            <div class="col-lg-12">
+                <div class="part-parallax-introduction">
+                    <h1>Check out our blog posts!</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" align="center">
+        <div class="col-lg-12">
+            <div class="search-bar">
+                <form action="{% url 'blog_view_results' %}" method="get">
+                    <input type="text" name="q" value="{{ request.GET.q }}" placeholder="Search an Article">
+                    <div>&nbsp;</div>
+                    <div>&nbsp;</div>
+                    <button type="submit">Search Article</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div>&nbsp;</div>
+
+
+    {% if post_list %}
+        {% for post in post_list %}
+            {% if forloop.first %}
+                <div class="container-fluid" align="center">
+                    <div class="content">{% endif %}
+                          <div class="col-lg-4">
+                            <div class="blog">
+                                <img src="{{ post.cover_representation.url }}" alt="article cover" class="img-responsive">
+                                <div class="article-details">
+                                    <h1 class="name">{{ post.title }}</h1>
+                                    <div>&nbsp;</div>
+                                    <span class="post">{{ post.introduction | slice:":300" }}</span>
+                                    <div>&nbsp;</div>
+                                    <h4>{{ post.created_on }}</h4>
+                                    <div>&nbsp;</div>
+                                    <a href="{% url 'blog_post_detail' post.slug %}">Read more</a>
+                                </div>
+                            </div>
+                          </div>
+          {% if forloop.counter0|divisibleby:3 %}</div><div class="content">{% endif %}
+          {% if forloop.last %}</div>{% endif %}
+        {% endfor %}
+    {% endif %}
+    </div>
+
+    <div>&nbsp;</div>
+
+    {% load static %}
+    <script type="text/javascript" language="JavaScript" src="{% static 'js/blog-parallax-menu-opacity-on-scroll.js' %}"></script>
+
+{% endblock %}

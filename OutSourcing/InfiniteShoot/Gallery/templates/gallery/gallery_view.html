@@ -1,0 +1,98 @@
+{% extends 'layouts/main_layout.html' %}
+
+{% block head %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/gallery_style.css' %}">
+{% endblock %}
+
+{% block content %}
+
+    <div class="parallax_gallery">
+
+        <input type="checkbox" id="nav" class="hidden"/>
+        <label for="nav" class="nav-open"><i></i><i></i><i></i></label>
+
+        <div class="nav-container">
+
+            <div class="nav-row">
+                <div class="nav-logo">
+                    <a href="{% url 'index' %}">
+                        <p>
+                                <i class="fas fa-infinity"></i> InfiniteShoot
+                        </p>
+                    </a>
+                </div>
+                {% if user.is_authenticated %}
+                    <div class="nav-controls">
+                        <a href="{% url 'blog_view' %}">Blog</a>
+                        <a href="{% url 'contact_view' %}">Contact</a>
+                        <a href="{% url 'gallery_view' %}">InfiniteShoot Gallery</a>
+                        <a href="{% url 'personal_gallery_view' %}">Your Gallery</a>
+                        <a href="{% url 'password_change' %}">Change your password</a>
+                        <a href="{% url 'logout' %}">Logout</a>
+                    </div>
+                {% else %}
+                    <div class="nav-controls">
+                        <a href="{% url 'blog_view' %}">Blog</a>
+                        <a href="{% url 'contact_view' %}">Contact</a>
+                        <a href="{% url 'gallery_view' %}">Gallery</a>
+                        <a href="{% url 'login' %}">Login</a>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <div>&nbsp;</div><div>&nbsp;</div>
+
+        <div class="container-fluid" align="center">
+            <div class="col-lg-12">
+                <div class="part-parallax-introduction">
+                    <h1>Check out some of our photos!</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container-fluid">
+        <div class="col-lg-12">
+            <div class="tz-gallery">
+                <div class="row">
+                    <div class="column">
+                        {% for image in  images_for_first_column %}
+                                <a class="lightbox" href="{{ image.image.url }}">
+                                    <img src="{{ image.image.url }}" alt="image" >
+                                </a>
+                        {% endfor %}
+                    </div>
+                    <div class="column">
+                        {% for image in  images_for_second_column %}
+                                <a class="lightbox" href="{{ image.image.url }}">
+                                    <img src="{{ image.image.url }}" alt="image" >
+                                </a>
+                        {% endfor %}
+                    </div>
+                    <div class="column">
+                        {% for image in  images_for_third_column %}
+                                <a class="lightbox" href="{{ image.image.url }}">
+                                    <img src="{{ image.image.url }}" alt="image" >
+                                </a>
+                        {% endfor %}
+                    </div>
+                    <div class="column">
+                        {% for image in  images_for_fourth_column %}
+                                <a class="lightbox" href="{{ image.image.url }}">
+                                    <img src="{{ image.image.url }}" alt="image" >
+                                </a>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% load static %}
+    <script type="text/javascript" language="JavaScript" src="{% static 'js/gallery-parallax-menu-opacity-on-scroll.js' %}"></script>
+
+{% endblock %}
