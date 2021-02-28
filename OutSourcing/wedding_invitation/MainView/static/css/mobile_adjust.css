@@ -1,0 +1,57 @@
+@media(max-width: 700px) {
+
+    .welcome-message {
+        margin-top: 15em;
+    }
+
+    .welcome-message .message {
+        font-size: 40px;
+    }
+
+    .welcome-message h1 {
+        font-size: 30px;
+    }
+
+    #small-padding-line {
+        margin-top: 20%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+
+    .image-container .table-image {
+        width: 100%;
+        height: auto;
+    }
+
+    #small-padding-line {
+        margin-top: 10%;
+    }
+
+    .rsvp a {
+        padding: 3%;
+    }
+
+    .special-people .col-lg-3 {
+
+        margin-top: 7%;
+    }
+
+    #first-child {
+
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+}
