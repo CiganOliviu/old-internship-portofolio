@@ -1,0 +1,76 @@
+.blog-wallpaper {
+	background-image: url(../img/blogs_wallpaper.jpg);
+	min-height: 100vh;
+
+	@media (min-width: 768px) {
+		min-height: 20vw;
+	}
+
+	@media (min-width: 1200px) {
+		min-height: 400px;
+	}
+
+  	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+  	background-attachment: fixed;
+}
+
+.blog-brand {
+  	text-align: center;
+}
+
+.blog-brand a {
+  	color: #ffffff;
+	font-family: 'Lobster', cursive;
+  	transition: all 500ms ease;
+}
+
+.blog-brand i {
+  	font-size: 30px;
+  	padding: 2%;
+  	transition: all 500ms ease-out;
+}
+
+.blog-brand i:hover {
+  	color: #ff6666;
+  	transition: all 500ms ease-out;
+}
+
+.blog-brand a:hover {
+  	color: #ff6666;
+  	transition: all 500ms ease-out;
+}
+
+input {
+	width: 80%;
+	font-size: 20px;
+	padding: 1%;
+	border: 1px solid #e6e6e6;
+}
+
+#blog {
+	padding: 2%;
+}
+
+.blog-paragraphs {
+	padding: 3%;
+}
+
+.blog-main-image {
+	width: 100%;
+	height: auto;
+}
+
+.card-body img {
+	width: 100%;
+	height: auto;
+}
+
+@media(max-width: 800px) {
+
+	.card-body img {
+		width: 80%;
+	}
+}

@@ -1,0 +1,37 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="HtmlUnknownTag" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="16">
+            <item index="0" class="java.lang.String" itemvalue="nobr" />
+            <item index="1" class="java.lang.String" itemvalue="noembed" />
+            <item index="2" class="java.lang.String" itemvalue="comment" />
+            <item index="3" class="java.lang.String" itemvalue="noscript" />
+            <item index="4" class="java.lang.String" itemvalue="embed" />
+            <item index="5" class="java.lang.String" itemvalue="script" />
+            <item index="6" class="java.lang.String" itemvalue="no-repeat" />
+            <item index="7" class="java.lang.String" itemvalue="background-repeat" />
+            <item index="8" class="java.lang.String" itemvalue="background-size" />
+            <item index="9" class="java.lang.String" itemvalue="background-position" />
+            <item index="10" class="java.lang.String" itemvalue="background-attachment" />
+            <item index="11" class="java.lang.String" itemvalue="fixed" />
+            <item index="12" class="java.lang.String" itemvalue="cover" />
+            <item index="13" class="java.lang.String" itemvalue="min-height" />
+            <item index="14" class="java.lang.String" itemvalue="px" />
+            <item index="15" class="java.lang.String" itemvalue="vw" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="E303" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
