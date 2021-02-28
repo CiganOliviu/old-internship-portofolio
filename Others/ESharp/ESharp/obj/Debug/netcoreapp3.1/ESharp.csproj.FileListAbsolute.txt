@@ -1,0 +1,13 @@
+/media/cigan/Personal/GithubProjects/ESharp/ESharp/ESharp/bin/Debug/netcoreapp3.1/ESharp
+/media/cigan/Personal/GithubProjects/ESharp/ESharp/ESharp/bin/Debug/netcoreapp3.1/ESharp.deps.json
+/media/cigan/Personal/GithubProjects/ESharp/ESharp/ESharp/bin/Debug/netcoreapp3.1/ESharp.runtimeconfig.json
+/media/cigan/Personal/GithubProjects/ESharp/ESharp/ESharp/bin/Debug/netcoreapp3.1/ESharp.runtimeconfig.dev.json
+/media/cigan/Personal/GithubProjects/ESharp/ESharp/ESharp/bin/Debug/netcoreapp3.1/ESharp.dll
+/media/cigan/Personal/GithubProjects/ESharp/ESharp/ESharp/bin/Debug/netcoreapp3.1/ESharp.pdb
+/media/cigan/Personal/GithubProjects/ESharp/ESharp/ESharp/obj/Debug/netcoreapp3.1/ESharp.csprojAssemblyReference.cache
+/media/cigan/Personal/GithubProjects/ESharp/ESharp/ESharp/obj/Debug/netcoreapp3.1/ESharp.AssemblyInfoInputs.cache
+/media/cigan/Personal/GithubProjects/ESharp/ESharp/ESharp/obj/Debug/netcoreapp3.1/ESharp.AssemblyInfo.cs
+/media/cigan/Personal/GithubProjects/ESharp/ESharp/ESharp/obj/Debug/netcoreapp3.1/ESharp.csproj.CoreCompileInputs.cache
+/media/cigan/Personal/GithubProjects/ESharp/ESharp/ESharp/obj/Debug/netcoreapp3.1/ESharp.dll
+/media/cigan/Personal/GithubProjects/ESharp/ESharp/ESharp/obj/Debug/netcoreapp3.1/ESharp.pdb
+/media/cigan/Personal/GithubProjects/ESharp/ESharp/ESharp/obj/Debug/netcoreapp3.1/ESharp.genruntimeconfig.cache
