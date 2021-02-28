@@ -1,0 +1,26 @@
+{% extends 'layouts/main_layout.html' %}
+
+{% block head %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/css/login_style_cms.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="container" align="center">
+        <div class="col-lg-12">
+            <h2 id="title">Login</h2>
+            <div class="items">
+                <form class="form" method="post">
+                  {% csrf_token %}
+                  {{ form.as_p }}
+                  <button id="button" type="submit" name="button">Send</button>
+                </form>
+                <div id="sign">
+                    <a id="sign" type="submit" href="{% url 'password_reset' %}">Reset Password</a>
+                    <div>&nbsp;</div>
+                    <a id="sign" type="submit" href="{% url 'clients_management_system_index' %}">Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
