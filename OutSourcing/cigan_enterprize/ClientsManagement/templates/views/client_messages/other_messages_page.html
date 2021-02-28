@@ -1,0 +1,60 @@
+{% extends 'layouts/main_layout.html' %}
+
+{% block head %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style_cms.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mobile_adjust_cms.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div align="center">
+    <nav>
+        <input type="checkbox" id="nav" class="hidden"/>
+        <label for="nav" class="nav-open"><i></i><i></i><i></i></label>
+        <div class="nav-container">
+            <ul>
+                <li><a href="{% url 'update_profile' %}">Update Profile</a></li>
+                <li><a href="{% url 'index' %}">Workflow</a></li>
+                <li><a href="{% url 'feedback_page' %}">Feedback</a></li>
+                <li><a href="{% url 'client_messages' %}">Messages</a></li>
+                <li><a href="{% url 'projects_request' %}">Request a Project</a></li>
+                <li><a href="{% url 'projects_handler' %}">All Projects</a></li>
+                <li><a href="{% url 'product_handler' %}">All Products</a></li>
+                <li><a href="{% url 'logout' %}">Logout</a></li>
+                <li><a href="/">Main Platform</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div>
+
+<div class="container-fluid" id="content">
+    <div class="col-lg-12" align="left">
+        <div class="scrollmenu" align="center">
+            <a href="{% url 'client_messages' %}"> <i class="fas fa-list"></i> All Messages</a>
+            <a href="{% url 'all_messages' %}"> <i class="fas fa-list-ol"></i> Last Messages</a>
+            <a href="{% url 'projects_messages' %}"> <i class="fas fa-tasks"></i> About Projects</a>
+            <a href="{% url 'workflow_messages' %}"> <i class="fas fa-laptop-house"></i> Workflow Messages</a>
+            <a class="active-scroll-menu" href="{% url 'other_messages' %}"> <i class="fas fa-align-left"></i> Other Messages</a>
+        </div>
+        <div>&nbsp;</div>
+
+        {% if messages_query %}
+            {% for message in messages_query %}
+                <div class="messages" id="finished" onclick="location.href='{% url 'message_detail' message.message_slug %}';" style="cursor:pointer;">
+                    <p><b>{{ message.title }}</b></p><br>
+                    <p><b>{{ message.subject }}</b> {{ message.message | slice:":180" }}</p><br>
+                    <p><b>{{ message.date }}</b></p>
+                </div>
+                <div>&nbsp;</div>
+            {% endfor %}
+        {% else %}
+            <div id="info" align="center">
+              <h1>There are no messages listed yet.</h1>
+            </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

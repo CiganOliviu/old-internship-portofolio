@@ -1,0 +1,98 @@
+{% extends 'views/layouts/main_layout.html' %}
+
+{% block head %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/blog_style.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="blog-post-cover" style="background-image: url('{{ sponsorevent.location_image.url }}')";>
+  <div class="container-fluid" align="center">
+    <div class="col-lg-12">
+      <h1 id="blog-cover-h1">{{ sponsorevent.event_name }}, {{ sponsorevent.location }}</h1>
+    </div>
+  </div>
+</div>
+
+<div class="gray-background">
+  <div class="container-fluid" align="center">
+    <div class="col-lg-12">
+      <div class="studios-presentation">
+        <h1 class="big-title">At {{ sponsorevent.space }}</h1>
+        <p>
+          {{ sponsorevent.introduction }}
+        </p>
+        <div>&nbsp;</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="white-background">
+  <div class="container-fluid" align="center">
+    <div class="col-lg-12">
+      <div class="studios-presentation">
+        <h1 class="big-title">Part of {{ sponsorevent.part_of_event }}</h1>
+        <p>
+          {{ sponsorevent.about_event }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="gray-background">
+  <div class="container-fluid" align="center">
+    <div class="col-lg-12">
+      <div class="studios-presentation">
+        <h1 class="big-title">When it happens ? </h1>
+        <p>
+          {{ sponsorevent.date }}
+        </p>
+
+        <div>&nbsp;</div>
+
+        <a class="get_tickets" href="{{ sponsorevent.get_tickets}}">
+          Get Tickets Now!
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid" id="footer">
+  <div class="col-lg-12" align="center">
+    <h1 class="big-title">{{ sponsorevent.part_of_event }}</h1>
+  </div>
+  <div class="col-lg-6">
+    <div class="footer" align="left">
+      <h2><i class="fas fa-terminal" id="logo_terminal"></i> Cigan<b>Enterprize</b></h2>
+      <div>&nbsp;</div>
+      <p><i class="far fa-copyright"></i> 2020 Cigan<b>Enterprize</b>. All rights reserved.</p>
+    </div>
+  </div>
+  <div class="col-lg-6" align="center">
+    <div class="footer">
+      <div class="topnav">
+        <div>&nbsp;</div>
+        <a href="{% url 'employees' %}">Team</a>
+        <a href="{% url 'studio_lister' %}">Studios</a>
+        <a href="{% url 'jobs_lister' %}">Careers</a>
+        <a href="{% url 'newsletter' %}">Newsletter</a>
+        <a href="{% url 'form_contact' %}">Contact</a>
+        <a href="{% url 'events' %}">Events</a>
+        <a href="{% url 'internships_lister' %}"><b>Intern</b>Ships</a>
+        <a href="{% url 'blog_name' %}">Company<b>Blog</b></a>
+      </div>
+      <div class="social-media">
+        <a href="#"><i class="fab fa-linkedin"></i> </a>
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
