@@ -9,9 +9,14 @@ COLUMN_NUMBER = (
 )
 
 
-BOOLEAN_ANSWER = (
-    ("YES", "YES"),
-    ("NO", "NO"),
+PART_OF_CATALOGUE = (
+    ("Cover Image", "Cover Image"),
+    ("Content Image One", "Content Image One"),
+    ("Content Image Two", "Content Image Two"),
+    ("Content Image Three", "Content Image Three"),
+    ("Content Image Four", "Content Image Four"),
+    ("Back Image", "Back Image"),
+    ("None of it", "None of it"),
 )
 
 
@@ -29,16 +34,17 @@ class ImagesClient(models.Model):
     client = models.ForeignKey(User, on_delete=models.CASCADE)
     image = models.ImageField(upload_to='specific_user_gallery_images/')
     our_thoughts = models.TextField(blank=False, default="")
-
-    pick_cover_image = models.CharField(max_length=5, choices=BOOLEAN_ANSWER, default="NO")
-    pick_content_image_one = models.CharField(max_length=5, choices=BOOLEAN_ANSWER, default="NO")
-    pick_content_image_two = models.CharField(max_length=5, choices=BOOLEAN_ANSWER, default="NO")
-    pick_content_image_three = models.CharField(max_length=5, choices=BOOLEAN_ANSWER, default="NO")
-    pick_content_image_four = models.CharField(max_length=5, choices=BOOLEAN_ANSWER, default="NO")
-    pick_back_image = models.CharField(max_length=5, choices=BOOLEAN_ANSWER, default="NO")
-
     column = models.CharField(max_length=255, choices=COLUMN_NUMBER, default="First Column")
     image_slug = models.SlugField(max_length=200, default="")
 
     def __str__(self):
         return self.name
+
+
+class ClientCatalogue(models.Model):
+    client = models.ForeignKey(User, on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='clients_catalogue/')
+    image_positioning = models.CharField(max_length=255, choices=PART_OF_CATALOGUE, default="None of it")
+
+    def __str__(self):
+        return str(self.client)
