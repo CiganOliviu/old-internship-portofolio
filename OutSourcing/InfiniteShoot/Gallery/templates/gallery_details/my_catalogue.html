@@ -3,12 +3,12 @@
 {% block head %}
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/gallery_style.css' %}">
+
 {% endblock %}
 
 {% block content %}
 
     <div class="parallax_gallery">
-
         <input type="checkbox" id="nav" class="hidden"/>
         <label for="nav" class="nav-open"><i></i><i></i><i></i></label>
 
@@ -47,61 +47,82 @@
         <div class="container-fluid" align="center">
             <div class="col-lg-12">
                 <div class="part-parallax-introduction">
-                    <h1>Check out your gallery!</h1>
+                    <h1>Check out how your catalogue looks</h1>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container" align="center">
-        <div class="col-lg-12">
-            <div class="highlight">
-                <a href="{% url 'choose_preferred_photos' %}">Pick your photos for the album</a> 
-                <a href="{% url 'my_catalogue' %}">Check your album</a>
             </div>
         </div>
     </div>
 
     <div>&nbsp;</div>
 
-    <div class="container-fluid">
+    <div class="container-fluid" align="center">
         <div class="col-lg-12">
-            <div class="tz-gallery">
-                <div class="row">
-                    <div class="column">
-                        {% for image in  images_first_column_client_query %}
-                                <a class="lightbox" href="{{ image.image.url }}">
-                                    <img src="{{ image.image.url }}" alt="image" >
-                                </a>
-                        {% endfor %}
-                    </div>
-                    <div class="column">
-                        {% for image in  images_second_column_client_query %}
-                                <a class="lightbox" href="{{ image.image.url }}">
-                                    <img src="{{ image.image.url }}" alt="image" >
-                                </a>
-                        {% endfor %}
-                    </div>
-                    <div class="column">
-                        {% for image in  images_third_column_client_query %}
-                                <a class="lightbox" href="{{ image.image.url }}">
-                                    <img src="{{ image.image.url }}" alt="image" >
-                                </a>
-                        {% endfor %}
-                    </div>
-                    <div class="column">
-                        {% for image in  images_fourth_column_client_query %}
-                                <a class="lightbox" href="{{ image.image.url }}">
-                                    <img src="{{ image.image.url }}" alt="image" >
-                                </a>
-                        {% endfor %}
-                    </div>
-                </div>
+            <div class="catalogue">
+                {% for image in get_cover_image %}
+                    <img src="{{ image.image.url }}" alt="{{ image.image_positioning }}">
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <div class="container" align="center">
+        <div class="col-lg-12">
+            <h1>Content images</h1>
+        </div>
+    </div>
+
+    <div class="padding"></div>
+
+    <div class="container-fluid" align="center">
+        <div class="col-lg-3">
+            <div class="content_catalogue">
+                {% for image in get_image_one %}
+                    <img src="{{ image.image.url }}" alt="{{ image.image_positioning }}">
+                {% endfor %}
+            </div>
+        </div>
+            <div class="col-lg-3">
+            <div class="content_catalogue">
+                {% for image in get_image_two %}
+                    <img src="{{ image.image.url }}" alt="{{ image.image_positioning }}">
+                {% endfor %}
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="content_catalogue">
+                {% for image in get_image_three %}
+                    <img src="{{ image.image.url }}" alt="{{ image.image_positioning }}">
+                {% endfor %}
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="content_catalogue">
+                {% for image in get_image_four %}
+                    <img src="{{ image.image.url }}" alt="{{ image.image_positioning }}">
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <div class="container" align="center">
+        <div class="col-lg-12">
+            <h1>Content images</h1>
+        </div>
+    </div>
+
+    <div class="padding"></div>
+
+    <div class="container-fluid" align="center">
+        <div class="col-lg-12">
+            <div class="catalogue">
+                {% for image in get_back_image %}
+                    <img src="{{ image.image.url }}" alt="{{ image.image_positioning }}">
+                {% endfor %}
             </div>
         </div>
     </div>
 
     {% load static %}
-    <script type="text/javascript" language="JavaScript" src="{% static 'js/gallery-parallax-menu-opacity-on-scroll.js' %}"></script>
+    <script type="text/javascript" language="JavaScript" src="{% static 'js/image_detail_parallax-menu-opacity-on-scroll.js' %}"></script>
 
 {% endblock %}

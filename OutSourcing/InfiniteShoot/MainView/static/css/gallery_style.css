@@ -91,3 +91,11 @@
     color: #fff;
     background-position: 50% 50%;
 }
+
+.catalogue img {
+    width: 30%;
+}
+
+.content_catalogue img {
+    width: 100%
+}

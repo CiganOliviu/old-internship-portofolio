@@ -132,4 +132,4 @@ EMAIL_FILE_PATH = os.path.join(BASE_DIR, 'sent_emails')
 
 MEDIA_URL = '/MEDIA/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'MEDIA')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'MEDIA/')

@@ -7,7 +7,7 @@ from django.urls import reverse
 from django.views import generic
 from django.views.generic.edit import FormMixin
 
-from .models import ImagesClient, PlatformPresentationImage
+from .models import *
 from Gallery.form import ClientCatalogueForm
 
 
@@ -34,6 +34,7 @@ def get_images_from_database(request):
     images_second_column_client_query = ImagesClient.objects.filter(client=request.user, column="Second Column")
     images_third_column_client_query = ImagesClient.objects.filter(client=request.user, column="Third Column")
     images_fourth_column_client_query = ImagesClient.objects.filter(client=request.user, column="Fourth Column")
+
     return images_first_column_client_query, images_fourth_column_client_query, images_second_column_client_query, \
            images_third_column_client_query
 
@@ -118,3 +119,25 @@ class ChoosePreferredPhotosDetailView(LoginRequiredMixin, FormMixin, generic.Det
         form.save()
 
         return super(ChoosePreferredPhotosDetailView, self).form_valid(form)
+
+
+def my_catalogue(request):
+    template_name = 'gallery_details/my_catalogue.html'
+
+    get_cover_image = ClientCatalogue.objects.filter(client=request.user, image_positioning='Cover Image')
+    get_image_one = ClientCatalogue.objects.filter(client=request.user, image_positioning='Content Image One')
+    get_image_two = ClientCatalogue.objects.filter(client=request.user, image_positioning='Content Image Two')
+    get_image_three = ClientCatalogue.objects.filter(client=request.user, image_positioning='Content Image Three')
+    get_image_four = ClientCatalogue.objects.filter(client=request.user, image_positioning='Content Image Four')
+    get_back_image = ClientCatalogue.objects.filter(client=request.user, image_positioning='Back Image')
+
+    context = {
+        'get_cover_image': get_cover_image,
+        'get_image_one': get_image_one,
+        'get_image_two': get_image_two,
+        'get_image_three': get_image_three,
+        'get_image_four': get_image_four,
+        'get_back_image': get_back_image,
+    }
+
+    return render(request, template_name, context)
