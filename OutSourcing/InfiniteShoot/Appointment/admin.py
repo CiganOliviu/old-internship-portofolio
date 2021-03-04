@@ -3,7 +3,7 @@ from .models import Appointment, AdminResponse
 
 
 class AppointmentAdmin(admin.ModelAdmin):
-    list_display = ('first_name', 'last_name', 'email', 'calendar', 'sent_moment')
+    list_display = ('first_name', 'last_name', 'email', 'desired_date', 'sent_moment')
 
 
 class AdminResponseAdmin(admin.ModelAdmin):

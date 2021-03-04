@@ -7,7 +7,7 @@ class Appointment(models.Model):
     last_name = models.CharField(max_length=200, blank=False)
     email = models.EmailField(max_length=200, blank=False)
     phone_number = models.CharField(max_length=10, blank=False)
-    calendar = models.DateField()
+    desired_date = models.DateField()
     sent_moment = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
