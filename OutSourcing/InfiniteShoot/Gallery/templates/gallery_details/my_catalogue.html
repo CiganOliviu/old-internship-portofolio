@@ -36,6 +36,7 @@
                         <a href="{% url 'blog_view' %}">Blog</a>
                         <a href="{% url 'contact_view' %}">Contact</a>
                         <a href="{% url 'gallery_view' %}">Gallery</a>
+                        <a href="{% url 'appointment_view' %}">Set your Photo shoot</a>
                         <a href="{% url 'login' %}">Login</a>
                     </div>
                 {% endif %}
@@ -131,6 +132,6 @@
     </div>
 
     {% load static %}
-    <script type="text/javascript" language="JavaScript" src="{% static 'js/image_detail_parallax-menu-opacity-on-scroll.js' %}"></script>
+    <script type="text/javascript" lang="JavaScript" src="{% static 'js/default-parallax-menu-opacity-on-scroll.js' %}"></script>
 
 {% endblock %}

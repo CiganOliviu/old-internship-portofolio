@@ -1,44 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital@1&display=swap');
 
-#button-to-top {
-  display: inline-block;
-  background-color: #333333;
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  border-radius: 50%;
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
-  visibility: hidden;
-  z-index: 1000;
-}
-
-#button-to-top::after {
-  content: "";
-  font-family: FontAwesome;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 2em;
-  line-height: 50px;
-  color: #fff;
-}
-
-#button-to-top:hover {
-  cursor: pointer;
-  background-color: #000000;
-}
-
-#button-to-top:active {
-  background-color: #333333;
-}
-
-#button-to-top.show {
-  opacity: 0.7;
-  visibility: visible;
-}
-
 html,
 body {
     height: 100%;
