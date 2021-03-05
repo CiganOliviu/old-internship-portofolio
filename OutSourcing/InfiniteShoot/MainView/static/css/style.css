@@ -580,17 +580,6 @@ a:visited {
     opacity: 1; }
 }
 
-.newsletter_parallax {
-    height: 70vh;
-    width: 100%;
-    background-image: url("../imgs/parallax_newsletter.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    color: #fff;
-    background-position: 50% 50%;
-}
-
 .part-parallax-introduction {
     margin-top: 22%;
     color: #ffffff;
@@ -642,21 +631,9 @@ a:visited {
     }
 }
 
-.contact_parallax {
+.default_parallax {
     height: 70vh;
     width: 100%;
-    background-image: url("../imgs/parallax_contact.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    color: #fff;
-    background-position: 50% 50%;
-}
-
-.login_parallax {
-    height: 70vh;
-    width: 100%;
-    background-image: url("../imgs/parallax_login.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -699,17 +676,6 @@ a:visited {
 
 .search-bar form button:hover {
     background: #666666;
-}
-
-.blog_parallax {
-    height: 70vh;
-    width: 100%;
-    background-image: url("../imgs/blog_parallax.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    color: #fff;
-    background-position: 50% 50%;
 }
 
 .blog-content p {

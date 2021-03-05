@@ -1,7 +1,7 @@
 {% extends 'layouts/main_layout.html' %}
 
 {% block content %}
-    <div class="blog_parallax">
+    <div class="default_parallax" style="background-image: url('/MEDIA/wallpapers/blog_parallax.jpg');">
 
         <input type="checkbox" id="nav" class="hidden"/>
         <label for="nav" class="nav-open"><i></i><i></i><i></i></label>
@@ -100,7 +100,7 @@
     <div>&nbsp;</div>
 
     {% load static %}
-    <script type="text/javascript" language="JavaScript" src="{% static 'js/blog-parallax-menu-opacity-on-scroll.js' %}"></script>
+    <script type="text/javascript" language="JavaScript" src="{% static 'js/default-parallax-menu-opacity-on-scroll.js' %}"></script>
 
 {% endblock %}
 

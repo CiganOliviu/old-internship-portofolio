@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     $(window).scroll(function () {
 
-        const height = $('.blog_parallax').height() / 2;
+        const height = $('.default_parallax').height() / 2;
         const scrollTop = $(window).scrollTop();
 
         if ($(document).width() >= 800) {
