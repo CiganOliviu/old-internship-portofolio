@@ -12,14 +12,3 @@ class Appointment(models.Model):
 
     def __str__(self):
         return self.email
-
-
-class AdminResponse(models.Model):
-    client = models.ForeignKey(User, on_delete=models.CASCADE)
-    appointment = models.DateField()
-    location = models.CharField(max_length=100, blank=False)
-    response_moment = models.DateTimeField(auto_now_add=True)
-
-    def __str__(self):
-        return self.client
-
