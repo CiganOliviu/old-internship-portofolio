@@ -11,10 +11,7 @@ COLUMN_NUMBER = (
 
 PART_OF_CATALOGUE = (
     ("Cover Image", "Cover Image"),
-    ("Content Image One", "Content Image One"),
-    ("Content Image Two", "Content Image Two"),
-    ("Content Image Three", "Content Image Three"),
-    ("Content Image Four", "Content Image Four"),
+    ("Content Image", "Content Image"),
     ("Back Image", "Back Image"),
     ("None of it", "None of it"),
 )

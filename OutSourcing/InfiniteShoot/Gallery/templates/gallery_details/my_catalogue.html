@@ -84,34 +84,13 @@
     <div class="padding"></div>
 
     <div class="container-fluid" align="center">
-        <div class="col-lg-3">
-            <div class="content_catalogue">
-                {% for image in get_image_one %}
-                    <img src="{{ image.image.url }}" alt="{{ image.image_positioning }}">
-                {% endfor %}
-            </div>
-        </div>
+        {% for image in get_image %}
             <div class="col-lg-3">
-            <div class="content_catalogue">
-                {% for image in get_image_two %}
+                <div class="content_catalogue">
                     <img src="{{ image.image.url }}" alt="{{ image.image_positioning }}">
-                {% endfor %}
+                </div>
             </div>
-        </div>
-        <div class="col-lg-3">
-            <div class="content_catalogue">
-                {% for image in get_image_three %}
-                    <img src="{{ image.image.url }}" alt="{{ image.image_positioning }}">
-                {% endfor %}
-            </div>
-        </div>
-        <div class="col-lg-3">
-            <div class="content_catalogue">
-                {% for image in get_image_four %}
-                    <img src="{{ image.image.url }}" alt="{{ image.image_positioning }}">
-                {% endfor %}
-            </div>
-        </div>
+        {% endfor %}
     </div>
 
     <div class="container" align="center">
