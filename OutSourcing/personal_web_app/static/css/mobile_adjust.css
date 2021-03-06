@@ -1,0 +1,196 @@
+@media(max-width: 800px) {
+
+  body  {
+    font-size: 18px;
+  }
+
+  .brand li {
+  	display: block;
+    padding: 0;
+  }
+
+  .brand li a {
+    font-size: 22px;
+  }
+
+  .brand h1 {
+    font-size: 40px;
+  }
+
+  .brand i {
+    font-size: 32px;
+  }
+
+  .welcome-message .message {
+    font-size: 40px;
+  }
+
+  .welcome-message i {
+    font-size: 45px;
+  }
+
+  .counter-box .counter-child-one {
+    border-right: none;
+  }
+
+  .counter-box .counter-child-two {
+    border-right: none;
+  }
+
+  .card-title {
+      font-size: 30px;
+  }
+
+  .content h1 {
+    font-size: 30px;
+  }
+
+  .books button {
+    margin-bottom: 20px;
+  }
+
+  .footer h1 {
+    font-size: 30px;
+  }
+
+  .footer ul li {
+  	display: table;
+  }
+
+  .footer i {
+    padding: 2%;
+  }
+
+  .box-project .box-content {
+    padding: 8%;
+  }
+
+  .box-project .box-content .name {
+    font-size:35px;
+    margin: 0 0 0;
+    padding: 1%;
+  }
+
+  .box-project .box-content .post {
+    font-size: 20px;
+  }
+
+  .box-project .box-content .smaller-post {
+    font-size: 18px;
+  }
+
+  .box-project .box-content .post i {
+    font-size: 40px;
+  }
+
+  .box-project .box-content .post i:hover {
+    font-size: 33px;
+  }
+
+  @-webkit-keyframes sdb05 {
+    0% {
+      -webkit-transform: translate(0, 0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+  
+      opacity: 0;
+    }
+  }
+  @keyframes sdb05 {
+    0% {
+      transform: translate(0, 0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(11px);
+      opacity: 0;
+    }
+  }
+
+  label .menu {
+    
+    height: 180px;
+    width: 180px;
+  }
+
+  label .hamburger {
+    
+    left: 40px;
+  }
+
+  .form input {
+    width: 100%;
+  }
+
+  label a {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 450px) {
+
+  .brand h1 {
+    font-size: 30px;
+  }
+
+  .brand i {
+    font-size: 22px;
+  }
+
+  .welcome-message .message {
+    font-size: 30px;
+  }
+
+  .welcome-message i {
+    font-size: 35px;
+  }
+
+  .container .box {
+      width:calc(370px - 60px);
+      height:calc(339px - 30px);
+  }
+
+  .box-project .box-content {
+    padding: 0;
+  }
+
+  .box-project .box-content .name {
+    font-size:20px;
+    margin: 0 0 0;
+    padding: 1%;
+  }
+
+  .box-project .box-content .post {
+    font-size: 17px;
+  }
+
+  .box-project .box-content .smaller-post {
+    font-size: 15px;
+  }
+
+  .box-project .box-content .post i {
+    font-size: 25px;
+  }
+
+  .box-project .box-content .post i:hover {
+    font-size: 22px;
+  }
+
+  .footer i {
+    padding: 4%;
+  }
+}
+
+@media screen and (max-width:990px) {
+
+  .box-project {
+      margin-bottom: 30px !important;
+  }
+}
