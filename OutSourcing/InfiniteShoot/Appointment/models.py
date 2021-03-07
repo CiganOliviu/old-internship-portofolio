@@ -9,6 +9,8 @@ class Appointment(models.Model):
     phone_number = models.CharField(max_length=10, blank=False)
     desired_date = models.DateField()
     sent_moment = models.DateTimeField(auto_now_add=True)
+    seen = models.BooleanField(default=False)
+    accepted = models.BooleanField(default=False)
 
     def __str__(self):
         return self.email
