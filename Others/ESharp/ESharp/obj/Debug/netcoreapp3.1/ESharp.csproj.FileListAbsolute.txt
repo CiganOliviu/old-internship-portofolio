@@ -11,3 +11,16 @@
 /media/cigan/Personal/GithubProjects/ESharp/ESharp/ESharp/obj/Debug/netcoreapp3.1/ESharp.dll
 /media/cigan/Personal/GithubProjects/ESharp/ESharp/ESharp/obj/Debug/netcoreapp3.1/ESharp.pdb
 /media/cigan/Personal/GithubProjects/ESharp/ESharp/ESharp/obj/Debug/netcoreapp3.1/ESharp.genruntimeconfig.cache
+D:\ciganenterprise_git\EssentialAlgo\ESharp\ESharp\bin\Debug\netcoreapp3.1\ESharp.exe
+D:\ciganenterprise_git\EssentialAlgo\ESharp\ESharp\bin\Debug\netcoreapp3.1\ESharp.deps.json
+D:\ciganenterprise_git\EssentialAlgo\ESharp\ESharp\bin\Debug\netcoreapp3.1\ESharp.runtimeconfig.json
+D:\ciganenterprise_git\EssentialAlgo\ESharp\ESharp\bin\Debug\netcoreapp3.1\ESharp.runtimeconfig.dev.json
+D:\ciganenterprise_git\EssentialAlgo\ESharp\ESharp\bin\Debug\netcoreapp3.1\ESharp.dll
+D:\ciganenterprise_git\EssentialAlgo\ESharp\ESharp\bin\Debug\netcoreapp3.1\ESharp.pdb
+D:\ciganenterprise_git\EssentialAlgo\ESharp\ESharp\obj\Debug\netcoreapp3.1\ESharp.csprojAssemblyReference.cache
+D:\ciganenterprise_git\EssentialAlgo\ESharp\ESharp\obj\Debug\netcoreapp3.1\ESharp.AssemblyInfoInputs.cache
+D:\ciganenterprise_git\EssentialAlgo\ESharp\ESharp\obj\Debug\netcoreapp3.1\ESharp.AssemblyInfo.cs
+D:\ciganenterprise_git\EssentialAlgo\ESharp\ESharp\obj\Debug\netcoreapp3.1\ESharp.csproj.CoreCompileInputs.cache
+D:\ciganenterprise_git\EssentialAlgo\ESharp\ESharp\obj\Debug\netcoreapp3.1\ESharp.dll
+D:\ciganenterprise_git\EssentialAlgo\ESharp\ESharp\obj\Debug\netcoreapp3.1\ESharp.pdb
+D:\ciganenterprise_git\EssentialAlgo\ESharp\ESharp\obj\Debug\netcoreapp3.1\ESharp.genruntimeconfig.cache

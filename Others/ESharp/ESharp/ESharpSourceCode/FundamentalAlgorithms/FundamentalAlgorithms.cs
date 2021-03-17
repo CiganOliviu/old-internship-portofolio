@@ -4,9 +4,9 @@ namespace ESharp.ESharpSourceCode.FundamentalAlgorithms
     {
         private int GetProductOfConsecutiveElements(int factor)
         {
-            int result = 1;
+            var result = 1;
 
-            for (int it = 1; it <= factor; it++)
+            for (var it = 1; it <= factor; it++)
                 result *= it;
 
             return result;
@@ -32,7 +32,7 @@ namespace ESharp.ESharpSourceCode.FundamentalAlgorithms
         {
             if (factor == 0 || factor == 1) return 1;
 
-            int result = this.GetProductOfConsecutiveElements(factor);
+            var result = this.GetProductOfConsecutiveElements(factor);
             
             return result;
         }
@@ -58,7 +58,7 @@ namespace ESharp.ESharpSourceCode.FundamentalAlgorithms
 
             int firstElement = 0, secondElement = 1;
 
-            for (int it = 2; it <= factor; it++)
+            for (var it = 2; it <= factor; it++)
                 this.StepUpInFibonacciSequence(ref firstElement, ref secondElement);
 
             return secondElement;
@@ -92,11 +92,11 @@ namespace ESharp.ESharpSourceCode.FundamentalAlgorithms
 
         public int GetCatalanNumber(int factor)
         {
-            int result = 0; 
+            var result = 0; 
             
             if (factor <= 1) return 1; 
             
-            for (int it = 0; it < factor; it++) 
+            for (var it = 0; it < factor; it++) 
                 result += GetCatalanNumber(it) * GetCatalanNumber(factor - it - 1); 
             
             return result; 
