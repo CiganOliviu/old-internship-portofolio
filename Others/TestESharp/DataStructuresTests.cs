@@ -5,7 +5,7 @@ using NUnit.Framework;
 
 namespace TestESharp
 {
-    public class Tests
+    public class DataStructureTests
     {
         private IAbstractOneDimensionalArrayObject _oneDimensionalArray;
         private IAbstractMatrix _matrix;

@@ -22,9 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="336778e3-1647-4667-a72c-7b0f1c14a832" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ESharp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ESharp/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="336778e3-1647-4667-a72c-7b0f1c14a832" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,7 +33,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/ESharp/ESharpSourceCode/NumbersAlgorithms/NumbersAlgorithms.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../TestESharp/DataStructuresTests.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../TestESharp/DataStructuresTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../TestESharp/NumbersAlgorithmsTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../TestESharp/OneDimensionalArraysWorkflowTests.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -52,12 +50,19 @@
       <option value="$PROJECT_DIR$/../TestESharp/NumbersPropertiesVerifierTests.cs" />
       <option value="$PROJECT_DIR$/ESharp/ESharpSourceCode/NumbersPropertiesVerifier/NumbersPropertiesVerifier.cs" />
       <option value="$PROJECT_DIR$/ESharp/ESharpSourceCode/OneDimensionalArraysWorkflow/OneDimensionalArraysWorkflowFactoryObject.cs" />
-      <option value="$PROJECT_DIR$/ESharp/ESharpSourceCode/MatricesWorkflow/IAbstractMatricesWorkflow.cs" />
       <option value="$PROJECT_DIR$/ESharp/ESharpSourceCode/MatricesWorkflow/MatricesWorkflowAbstractFactory.cs" />
-      <option value="$PROJECT_DIR$/ESharp/ESharpSourceCode/MatricesWorkflow/MatricesWorkflow.cs" />
       <option value="$PROJECT_DIR$/ESharp/ESharpSourceCode/OneDimensionalArraysWorkflow/IAbstractOneDimensionalArraysWorkflow.cs" />
       <option value="$PROJECT_DIR$/ESharp/ESharpSourceCode/OneDimensionalArraysWorkflow/OneDimensionalArraysWorkflow.cs" />
       <option value="$PROJECT_DIR$/../TestESharp/OneDimensionalArraysWorkflowTests.cs" />
+      <option value="$PROJECT_DIR$/ESharp/ESharpSourceCode/MatricesWorkflow/IAbstractMatricesWorkflow.cs" />
+      <option value="$PROJECT_DIR$/ESharp/ESharpSourceCode/MatricesWorkflow/MatricesWorkflow.cs" />
+      <option value="$PROJECT_DIR$/ESharp/ESharpSourceCode/SpecialOneDimensionalArrayAlgorithms/SpecialOneDimensionalArrayAlgorithmsFactoryObject.cs" />
+      <option value="$PROJECT_DIR$/ESharp/ESharpSourceCode/SpecialOneDimensionalArrayAlgorithms/IAbstractSpecialOneDimensionalArrayAlgorithms.cs" />
+      <option value="$PROJECT_DIR$/ESharp/ESharpSourceCode/MatricesWorkflow/MatricesWorkflowFactoryObject.cs" />
+      <option value="$PROJECT_DIR$/../TestESharp/MatricesWorkflowTests.cs" />
+      <option value="$PROJECT_DIR$/../TestESharp/DataStructuresTests.cs" />
+      <option value="$PROJECT_DIR$/ESharp/ESharpSourceCode/SpecialOneDimensionalArrayAlgorithms/SpecialOneDimensionalArrayAlgorithms.cs" />
+      <option value="$PROJECT_DIR$/../TestESharp/SpecialOneDimensionalArrayAlgorithmsTests.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1mOCid7BLc1raT6SrI3MvAOIcRt" />
@@ -121,6 +126,8 @@
       <workItem from="1615798807215" duration="1776000" />
       <workItem from="1615911191217" duration="4732000" />
       <workItem from="1616004119164" duration="2980000" />
+      <workItem from="1616072331878" duration="6311000" />
+      <workItem from="1616092610302" duration="2420000" />
     </task>
     <servers />
   </component>

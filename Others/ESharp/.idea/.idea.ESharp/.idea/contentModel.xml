@@ -37,7 +37,7 @@
           <e p="MatricesWorkflow" t="Include">
             <e p="IAbstractMatricesWorkflow.cs" t="Include" />
             <e p="MatricesWorkflow.cs" t="Include" />
-            <e p="MatricesWorkflowAbstractFactory.cs" t="Include" />
+            <e p="MatricesWorkflowFactoryObject.cs" t="Include" />
           </e>
           <e p="NumbersAlgorithms" t="Include">
             <e p="IAbstractNumbersAlgorithms.cs" t="Include" />
@@ -53,6 +53,11 @@
             <e p="IAbstractOneDimensionalArraysWorkflow.cs" t="Include" />
             <e p="OneDimensionalArraysWorkflow.cs" t="Include" />
             <e p="OneDimensionalArraysWorkflowFactoryObject.cs" t="Include" />
+          </e>
+          <e p="SpecialOneDimensionalArrayAlgorithms" t="Include">
+            <e p="IAbstractSpecialOneDimensionalArrayAlgorithms.cs" t="Include" />
+            <e p="SpecialOneDimensionalArrayAlgorithms.cs" t="Include" />
+            <e p="SpecialOneDimensionalArrayAlgorithmsFactoryObject.cs" t="Include" />
           </e>
         </e>
         <e p="obj" t="ExcludeRecursive">
@@ -71,6 +76,7 @@
       <e p="bin" t="ExcludeRecursive" />
       <e p="DataStructuresTests.cs" t="Include" />
       <e p="FundamentalAlgorithmsTests.cs" t="Include" />
+      <e p="MatricesWorkflowTests.cs" t="Include" />
       <e p="NumbersAlgorithmsTests.cs" t="Include" />
       <e p="NumbersPropertiesVerifierTests.cs" t="Include" />
       <e p="obj" t="ExcludeRecursive">
@@ -81,6 +87,7 @@
         </e>
       </e>
       <e p="OneDimensionalArraysWorkflowTests.cs" t="Include" />
+      <e p="SpecialOneDimensionalArrayAlgorithmsTests.cs" t="Include" />
       <e p="TestESharp.csproj" t="IncludeRecursive" />
     </e>
   </component>
