@@ -10,8 +10,8 @@ namespace ESharp.ESharpSourceCode.MatricesWorkflow
         int GetMatrixElementsProduct(IAbstractMatrix matrix);
         int GetMatrixElementsDifference(IAbstractMatrix matrix);
         int GetMatrixElementsDivision(IAbstractMatrix matrix);
-        IAbstractMatrix BoostUpMatrix(IAbstractMatrix matrix);
-        IAbstractMatrix BoostDownMatrix(IAbstractMatrix matrix);
+        IAbstractMatrix BoostUpMatrix(IAbstractMatrix matrix, int booster);
+        IAbstractMatrix BoostDownMatrix(IAbstractMatrix matrix, int booster);
         IAbstractMatrix GetMatricesSum(IAbstractMatrix matrixOne, IAbstractMatrix matrixTwo);
         IAbstractMatrix GetMatricesDifference(IAbstractMatrix matrixOne, IAbstractMatrix matrixTwo);
         IAbstractMatrix GetMatricesProduct(IAbstractMatrix matrixOne, IAbstractMatrix matrixTwo);

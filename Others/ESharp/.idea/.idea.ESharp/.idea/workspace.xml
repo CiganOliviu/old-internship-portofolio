@@ -54,15 +54,15 @@
       <option value="$PROJECT_DIR$/ESharp/ESharpSourceCode/OneDimensionalArraysWorkflow/IAbstractOneDimensionalArraysWorkflow.cs" />
       <option value="$PROJECT_DIR$/ESharp/ESharpSourceCode/OneDimensionalArraysWorkflow/OneDimensionalArraysWorkflow.cs" />
       <option value="$PROJECT_DIR$/../TestESharp/OneDimensionalArraysWorkflowTests.cs" />
-      <option value="$PROJECT_DIR$/ESharp/ESharpSourceCode/MatricesWorkflow/IAbstractMatricesWorkflow.cs" />
-      <option value="$PROJECT_DIR$/ESharp/ESharpSourceCode/MatricesWorkflow/MatricesWorkflow.cs" />
       <option value="$PROJECT_DIR$/ESharp/ESharpSourceCode/SpecialOneDimensionalArrayAlgorithms/SpecialOneDimensionalArrayAlgorithmsFactoryObject.cs" />
       <option value="$PROJECT_DIR$/ESharp/ESharpSourceCode/SpecialOneDimensionalArrayAlgorithms/IAbstractSpecialOneDimensionalArrayAlgorithms.cs" />
       <option value="$PROJECT_DIR$/ESharp/ESharpSourceCode/MatricesWorkflow/MatricesWorkflowFactoryObject.cs" />
-      <option value="$PROJECT_DIR$/../TestESharp/MatricesWorkflowTests.cs" />
       <option value="$PROJECT_DIR$/../TestESharp/DataStructuresTests.cs" />
       <option value="$PROJECT_DIR$/ESharp/ESharpSourceCode/SpecialOneDimensionalArrayAlgorithms/SpecialOneDimensionalArrayAlgorithms.cs" />
       <option value="$PROJECT_DIR$/../TestESharp/SpecialOneDimensionalArrayAlgorithmsTests.cs" />
+      <option value="$PROJECT_DIR$/ESharp/ESharpSourceCode/MatricesWorkflow/IAbstractMatricesWorkflow.cs" />
+      <option value="$PROJECT_DIR$/../TestESharp/MatricesWorkflowTests.cs" />
+      <option value="$PROJECT_DIR$/ESharp/ESharpSourceCode/MatricesWorkflow/MatricesWorkflow.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1mOCid7BLc1raT6SrI3MvAOIcRt" />
@@ -128,6 +128,8 @@
       <workItem from="1616004119164" duration="2980000" />
       <workItem from="1616072331878" duration="6311000" />
       <workItem from="1616092610302" duration="2420000" />
+      <workItem from="1616244115980" duration="2026000" />
+      <workItem from="1616254920216" duration="5052000" />
     </task>
     <servers />
   </component>
