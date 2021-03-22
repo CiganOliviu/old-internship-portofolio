@@ -16,6 +16,11 @@
       <e p="ESharp" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="DataStructures" t="Include">
+          <e p="Graph" t="Include">
+            <e p="Graph.cs" t="Include" />
+            <e p="GraphFactoryObject.cs" t="Include" />
+            <e p="IAbstractGraph.cs" t="Include" />
+          </e>
           <e p="Matrix" t="Include">
             <e p="IAbstractMatrix.cs" t="Include" />
             <e p="MatrixFactoryObject.cs" t="Include" />
@@ -26,6 +31,11 @@
             <e p="OneDimensionalArrayFactoryObject.cs" t="Include" />
             <e p="OneDimensionalArrayObject.cs" t="Include" />
           </e>
+          <e p="Tree" t="Include">
+            <e p="IAbstractTree.cs" t="Include" />
+            <e p="Tree.cs" t="Include" />
+            <e p="TreeFactoryObject.cs" t="Include" />
+          </e>
         </e>
         <e p="ESharp.csproj" t="IncludeRecursive" />
         <e p="ESharpSourceCode" t="Include">
@@ -33,6 +43,11 @@
             <e p="FundamentalAlgorithms.cs" t="Include" />
             <e p="FundamentalAlgorithmsFactoryObject.cs" t="Include" />
             <e p="IAbstractFundamentalAlgorithms.cs" t="Include" />
+          </e>
+          <e p="IOConsole" t="Include">
+            <e p="IAbstractIOConsole.cs" t="Include" />
+            <e p="IoConsole.cs" t="Include" />
+            <e p="IoConsoleFactoryObject.cs" t="Include" />
           </e>
           <e p="MatricesWorkflow" t="Include">
             <e p="IAbstractMatricesWorkflow.cs" t="Include" />

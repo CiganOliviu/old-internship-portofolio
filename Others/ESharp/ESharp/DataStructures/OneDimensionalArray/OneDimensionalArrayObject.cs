@@ -9,6 +9,12 @@ namespace ESharp.DataStructures.OneDimensionalArray
         {
             this._length = _array.Length;
         }
+
+        public void SetLengthOfOneDimensionalArray(int length)
+        {
+            this._length = length;
+        }
+
         public int GetLengthOfOneDimensionalArray()
         {
             return this._length;

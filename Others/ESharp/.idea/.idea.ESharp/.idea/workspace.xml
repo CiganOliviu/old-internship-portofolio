@@ -22,7 +22,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="336778e3-1647-4667-a72c-7b0f1c14a832" name="Default Changelist" comment="" />
+    <list default="true" id="336778e3-1647-4667-a72c-7b0f1c14a832" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ESharp/DataStructures/Graph/Graph.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ESharp/DataStructures/Graph/GraphFactoryObject.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ESharp/DataStructures/Graph/IAbstractGraph.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ESharp/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ESharp/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ESharp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ESharp/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,6 +69,20 @@
       <option value="$PROJECT_DIR$/ESharp/ESharpSourceCode/MatricesWorkflow/IAbstractMatricesWorkflow.cs" />
       <option value="$PROJECT_DIR$/../TestESharp/MatricesWorkflowTests.cs" />
       <option value="$PROJECT_DIR$/ESharp/ESharpSourceCode/MatricesWorkflow/MatricesWorkflow.cs" />
+      <option value="$PROJECT_DIR$/ESharp/ESharpSourceCode/IOConsole/IAbstractIOConsole.cs" />
+      <option value="$PROJECT_DIR$/ESharp/ESharpSourceCode/IOConsole/IoConsoleFactoryObject.cs" />
+      <option value="$PROJECT_DIR$/ESharp/ESharpSourceCode/IOConsole/IAbstractIoConsole.cs" />
+      <option value="$PROJECT_DIR$/ESharp/DataStructures/IAbstractBinaryTrees.cs" />
+      <option value="$PROJECT_DIR$/ESharp/DataStructures/Tree/TreeFactoryObject.cs" />
+      <option value="$PROJECT_DIR$/ESharp/DataStructures/Tree/IAbstractTree.cs" />
+      <option value="$PROJECT_DIR$/ESharp/DataStructures/Tree/Tree.cs" />
+      <option value="$PROJECT_DIR$/ESharp/DataStructures/OneDimensionalArray/OneDimensionalArrayObject.cs" />
+      <option value="$PROJECT_DIR$/ESharp/DataStructures/OneDimensionalArray/AbstractOneDimensionalArrayObject.cs" />
+      <option value="$PROJECT_DIR$/ESharp/ESharpSourceCode/IOConsole/IoConsole.cs" />
+      <option value="$PROJECT_DIR$/ESharp/DataStructures/Graph/IGraph.cs" />
+      <option value="$PROJECT_DIR$/ESharp/DataStructures/Graph/GraphFactoryObject.cs" />
+      <option value="$PROJECT_DIR$/ESharp/DataStructures/Graph/IAbstractGraph.cs" />
+      <option value="$PROJECT_DIR$/ESharp/DataStructures/Graph/Graph.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1mOCid7BLc1raT6SrI3MvAOIcRt" />
@@ -130,6 +150,7 @@
       <workItem from="1616092610302" duration="2420000" />
       <workItem from="1616244115980" duration="2026000" />
       <workItem from="1616254920216" duration="5052000" />
+      <workItem from="1616437466351" duration="4640000" />
     </task>
     <servers />
   </component>
